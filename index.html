@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salish Sea Family Trip 2026</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;background:#f5f4f0;color:#1a1a18;line-height:1.5}
+.hdr{background:#fff;border-bottom:1px solid #e0dfd8;padding:14px 16px;position:sticky;top:0;z-index:100}
+.hdr-title{font-size:17px;font-weight:600;color:#1a1a18}
+.hdr-sub{font-size:12px;color:#888780;margin-top:2px}
+.tabs{display:flex;overflow-x:auto;background:#fff;border-bottom:1px solid #e0dfd8;padding:0 8px;gap:4px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:10px 12px;font-size:13px;font-weight:500;color:#888780;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.tab.on{color:#185FA5;border-bottom-color:#185FA5}
+.pane{display:none;padding:12px 16px 32px}
+.pane.on{display:block}
+.base-card{background:#fff;border-radius:12px;border:1px solid #e0dfd8;padding:14px;margin-bottom:12px}
+.base-name{font-size:16px;font-weight:600;margin-bottom:4px}
+.base-dates{font-size:13px;color:#185FA5;font-weight:500;margin-bottom:6px}
+.base-addr{font-size:13px;color:#5F5E5A;margin-bottom:8px;line-height:1.4}
+.base-vibe{font-size:13px;color:#5F5E5A;line-height:1.5;padding-top:8px;border-top:1px solid #f0efe8}
+.map-btn{display:inline-flex;align-items:center;gap:5px;background:#E6F1FB;color:#185FA5;font-size:12px;font-weight:500;padding:5px 10px;border-radius:20px;text-decoration:none;margin-top:8px}
+.cost-pill{display:inline-block;background:#EAF3DE;color:#3B6D11;font-size:11px;font-weight:600;padding:3px 8px;border-radius:20px;margin-bottom:6px}
+.section{margin-bottom:12px}
+.sec-hdr{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#fff;border-radius:10px;border:1px solid #e0dfd8;cursor:pointer;user-select:none}
+.sec-hdr-left{display:flex;align-items:center;gap:8px}
+.sec-icon{font-size:18px}
+.sec-label{font-size:14px;font-weight:600;color:#1a1a18}
+.sec-chev{font-size:18px;color:#888780;transition:transform .2s}
+.sec-chev.op{transform:rotate(180deg)}
+.sec-body{display:none;background:#fff;border:1px solid #e0dfd8;border-top:none;border-radius:0 0 10px 10px;padding:4px 0 8px}
+.sec-body.op{display:block}
+.item{padding:10px 14px;border-bottom:1px solid #f0efe8}
+.item:last-child{border-bottom:none}
+.item-name{font-size:14px;font-weight:600;color:#1a1a18;display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.item-desc{font-size:13px;color:#5F5E5A;margin-top:3px;line-height:1.5}
+.item-nav{display:inline-flex;align-items:center;gap:4px;background:#E6F1FB;color:#185FA5;font-size:11px;font-weight:500;padding:3px 8px;border-radius:20px;text-decoration:none;white-space:nowrap;flex-shrink:0}
+.warn-pill{display:inline-block;background:#FCEBEB;color:#A32D2D;font-size:11px;font-weight:600;padding:2px 7px;border-radius:20px;margin-top:4px}
+.trip-row{display:grid;grid-template-columns:1fr auto auto;align-items:start;gap:8px;padding:10px 14px;border-bottom:1px solid #f0efe8}
+.trip-row:last-child{border-bottom:none}
+.trip-name{font-size:14px;font-weight:600;color:#1a1a18}
+.trip-drive{font-size:12px;color:#888780;white-space:nowrap;padding-top:2px}
+.trip-hook{font-size:12px;color:#5F5E5A;margin-top:2px;grid-column:1/-1}
+.port-row{padding:10px 14px;border-bottom:1px solid #f0efe8}
+.port-row:last-child{border-bottom:none}
+.port-date{font-size:11px;color:#888780;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.port-name{font-size:14px;font-weight:600;color:#1a1a18;margin:2px 0}
+.port-desc{font-size:13px;color:#5F5E5A;line-height:1.5}
+.top10-item{display:flex;gap:12px;padding:10px 14px;border-bottom:1px solid #f0efe8;align-items:flex-start}
+.top10-item:last-child{border-bottom:none}
+.top10-num{font-size:20px;font-weight:700;color:#D3D1C7;min-width:28px;line-height:1.2}
+.top10-name{font-size:14px;font-weight:600;color:#1a1a18}
+.top10-why{font-size:12px;color:#5F5E5A;margin-top:2px;line-height:1.5}
+.section-card{background:#fff;border-radius:10px;border:1px solid #e0dfd8;overflow:hidden;margin-bottom:10px}
+.dates-badge{font-size:11px;color:#888780}
+</style>
+</head>
+<body>
+<h1 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden">Salish Sea Family Trip Planner 2026 — Seattle, Alaska Cruise, and Washington State road trip for family of 3</h1>
+
+<div class="hdr">
+  <div class="hdr-title">&#9875; Salish Sea 2026</div>
+  <div class="hdr-sub">June 27 – July 23 &nbsp;·&nbsp; Family of 3 &nbsp;·&nbsp; 27 nights</div>
+</div>
+
+<div class="tabs">
+  <button class="tab on" onclick="sw('overview')">Overview</button>
+  <button class="tab" onclick="sw('seattle')">Seattle</button>
+  <button class="tab" onclick="sw('cruise')">Cruise</button>
+  <button class="tab" onclick="sw('p1')">Bellingham</button>
+  <button class="tab" onclick="sw('p2')">Blaine</button>
+  <button class="tab" onclick="sw('p3')">Anacortes</button>
+  <button class="tab" onclick="sw('p4')">Bremerton</button>
+  <button class="tab" onclick="sw('top10')">Top 10</button>
+</div>
+
+<div id="overview" class="pane on">
+  <div class="base-card">
+    <div style="font-size:13px;color:#5F5E5A;line-height:1.7;margin-bottom:12px">Full trip: fly into Seattle → cruise Alaska → road trip Salish Sea → fly home from Seattle.</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+        <div><div style="font-size:13px;font-weight:600">&#127968; Mediterranean Inn, Seattle</div><div style="font-size:12px;color:#888780">June 27 · 1 night · pre-cruise</div></div>
+        <a class="map-btn" href="https://maps.google.com/?cid=2092073351510984818" target="_blank">&#128205; Map</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+        <div><div style="font-size:13px;font-weight:600">&#128674; Star Princess · Alaska</div><div style="font-size:12px;color:#888780">June 28 – July 5 · 7 nights</div></div>
+        <span style="font-size:12px;color:#888780">roundtrip SEA</span>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+        <div><div style="font-size:13px;font-weight:600">&#127968; Stromer Rd, Bellingham</div><div style="font-size:12px;color:#888780">July 5–6 · 1 night</div></div>
+        <a class="map-btn" href="https://maps.google.com/?q=5166+Stromer+Rd+Bellingham+WA" target="_blank">&#128205; Map</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+        <div><div style="font-size:13px;font-weight:600">&#127968; Merle Pl, Blaine/Birch Bay</div><div style="font-size:12px;color:#888780">July 6–13 · 7 nights · $950</div></div>
+        <a class="map-btn" href="https://maps.google.com/?q=8154+Merle+Pl+Blaine+WA" target="_blank">&#128205; Map</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+        <div><div style="font-size:13px;font-weight:600">&#127968; F Ave, Anacortes</div><div style="font-size:12px;color:#888780">July 13–16 · 3 nights · $561</div></div>
+        <a class="map-btn" href="https://maps.google.com/?q=1113+F+Ave+Anacortes+WA" target="_blank">&#128205; Map</a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+        <div><div style="font-size:13px;font-weight:600">&#127968; Naomi Cottage, Bremerton</div><div style="font-size:12px;color:#888780">July 16–23 · 7 nights · $1,049</div></div>
+        <a class="map-btn" href="https://maps.google.com/?q=4938+Naomi+Ave+Bremerton+WA" target="_blank">&#128205; Map</a>
+      </div>
+    </div>
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0efe8;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div style="background:#f5f4f0;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#888780;margin-bottom:4px">Salish Sea cost</div><div style="font-size:22px;font-weight:700;color:#1a1a18">$2,631</div></div>
+      <div style="background:#f5f4f0;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#888780;margin-bottom:4px">Per night</div><div style="font-size:22px;font-weight:700;color:#1a1a18">$146</div></div>
+    </div>
+  </div>
+</div>
+
+<div id="seattle" class="pane">
+  <div class="base-card">
+    <div class="cost-pill">1 night · pre-cruise</div>
+    <div class="base-name">Mediterranean Inn</div>
+    <div class="base-dates">Friday June 27</div>
+    <div class="base-addr">425 Queen Anne Ave N, Seattle WA 98109</div>
+    <a class="map-btn" href="https://maps.google.com/?cid=2092073351510984818" target="_blank">&#128205; Open in Maps</a>
+    <div class="base-vibe">Queen Anne neighborhood. Walk to Seattle Center. Cruise departs tomorrow — keep tonight fun but don't burn energy.</div>
+  </div>
+
+  <div class="section-card">
+    <div class="item">
+      <div class="item-name">Pike Place Market <a class="item-nav" href="https://maps.google.com/?cid=6936701621581553436" target="_blank">&#128205; Nav</a></div>
+      <div class="item-desc">Bread bowl chowder at Pike Place Chowder. Piroshky Piroshky for snacks. Watch the fish throwers. Walk the lower market stalls — 2 hrs.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Olympic Sculpture Park</div>
+      <div class="item-desc">Free. 20-min walk from Pike Place. Great Sound and Olympic Mountain views. Easy for the kid.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Space Needle (optional)</div>
+      <div class="item-desc">Best at dusk ~8–9pm in late June. Book tickets online ahead.</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div style="padding:10px 14px;background:#f5f4f0;border-radius:10px 10px 0 0">
+      <div style="font-size:11px;font-weight:700;color:#888780;text-transform:uppercase;letter-spacing:.06em">Dinner options</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Din Tai Fung · Pacific Place <a class="item-nav" href="https://maps.google.com/?q=Din+Tai+Fung+Pacific+Place+Seattle" target="_blank">&#128205; Nav</a></div>
+      <div class="item-desc">World-class Taiwanese soup dumplings. Kid obsession-level food. Expect a wait — worth it.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Matt's in the Market</div>
+      <div class="item-desc">Casual fresh local seafood above Pike Place. Great if you want something quick and local.</div>
+    </div>
+  </div>
+</div>
+
+<div id="cruise" class="pane">
+  <div class="base-card">
+    <div class="cost-pill">7 nights · roundtrip Seattle</div>
+    <div class="base-name">Star Princess · Inside Passage</div>
+    <div class="base-dates">June 28 – July 5</div>
+    <div class="base-vibe">Ketchikan · Endicott Arm / Dawes Glacier · Juneau · Skagway · Victoria BC. Keep the kid on deck as much as possible — wildlife happens when you're just standing and watching.</div>
+  </div>
+
+  <div class="section-card">
+    <div style="padding:10px 14px;background:#f5f4f0;border-radius:10px 10px 0 0">
+      <div style="font-size:11px;font-weight:700;color:#888780;text-transform:uppercase;letter-spacing:.06em">Port schedule</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Sat June 28</div>
+      <div class="port-name">Embark Seattle</div>
+      <div class="port-desc">Departs afternoon. Sail out through Puget Sound into the Inside Passage.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Sun June 29</div>
+      <div class="port-name">At sea · Inside Passage</div>
+      <div class="port-desc">Channel narrows, mountains rise from the water. Binoculars on deck. Watch for orcas, humpbacks, bald eagles.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Mon June 30</div>
+      <div class="port-name">Ketchikan</div>
+      <div class="port-desc">Creek Street boardwalk over salmon-run creek. Totem Bight State Park. Great Alaskan Lumberjack Show (kid-favorite). Fresh halibut dockside.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Tue July 1</div>
+      <div class="port-name">Endicott Arm / Dawes Glacier + Juneau</div>
+      <div class="port-desc">Morning: glacier calving from deck. Afternoon: Mt. Roberts Tramway, Mendenhall Glacier, whale watching.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Wed July 2</div>
+      <div class="port-name">Skagway</div>
+      <div class="port-desc">White Pass & Yukon Railway — book ahead, narrow gauge to 2,865ft through mountain passes. Gold Rush main street walk. Gold panning for the kid.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Thu July 3</div>
+      <div class="port-name">At sea · southbound</div>
+      <div class="port-desc">Rest day on the ship. Dome pool. Watch the passage in reverse.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Fri July 4</div>
+      <div class="port-name">Victoria, BC</div>
+      <div class="port-desc">Butchart Gardens (30 min from downtown, spectacular in July). Inner Harbour waterfront walk. Optional: Fairmont Empress high tea.</div>
+    </div>
+    <div class="port-row">
+      <div class="port-date">Sat July 5</div>
+      <div class="port-name">Disembark Seattle &#8594; Bellingham</div>
+      <div class="port-desc">Collect luggage. Drive I-5 north ~90 min. Salish Sea expedition begins.</div>
+    </div>
+  </div>
+</div>
+
+<div id="p1" class="pane">
+  <div class="base-card">
+    <div class="cost-pill">$69 · 1 night · arrival launchpad</div>
+    <div class="base-name">Stromer Rd, Bellingham</div>
+    <div class="base-dates">July 5–6</div>
+    <div class="base-addr">5166 Stromer Rd, Bellingham WA 98226</div>
+    <a class="map-btn" href="https://maps.google.com/?q=5166+Stromer+Rd+Bellingham+WA" target="_blank">&#128205; Open in Maps</a>
+    <div class="base-vibe">Rural acreage just outside the city. One easy afternoon, early night. Tomorrow drive north to Blaine base camp.</div>
+  </div>
+
+  <div class="section-card">
+    <div style="padding:10px 14px;background:#f5f4f0;border-radius:10px 10px 0 0">
+      <div style="font-size:11px;font-weight:700;color:#888780;text-transform:uppercase;letter-spacing:.06em">Activities</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Whatcom Falls Park <a class="item-nav" href="https://maps.google.com/?cid=15679806643005878944" target="_blank">&#128205; Nav</a></div>
+      <div class="item-desc">4 miles of easy rainforest trails inside city limits. 1930s WPA stone footbridge over rushing falls. 1.5 hrs casual pace — perfect post-cruise stretch.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Galbraith Mountain MTB <a class="item-nav" href="https://maps.google.com/?cid=18417966778851182219" target="_blank">&#128205; Nav</a></div>
+      <div class="item-desc">World-class singletrack, 65+ miles of trails. Green/blue trails manageable for a 9-year-old on a rental. Rent bikes at Kulshan Cycles.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Wildcat Cove · Larrabee State Park</div>
+      <div class="item-desc">Kayak rental — paddle alongside honeycomb sandstone cliffs with San Juan Island views. Half-day paddle.</div>
+    </div>
+  </div>
+
+  <div class="section-card">
+    <div style="padding:10px 14px;background:#f5f4f0;border-radius:10px 10px 0 0">
+      <div style="font-size:11px;font-weight:700;color:#888780;text-transform:uppercase;letter-spacing:.06em">Eat</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Hokkai Ramen &amp; Sushi</div>
+      <div class="item-desc">Rich tonkotsu or spicy miso. Family-run strip mall spot. Perfect first PNW dinner.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">The Sandwich Odyssey</div>
+      <div class="item-desc">Massive house-made subs on scratch-baked bread. Great lunch spot.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Boomers Drive-In</div>
+      <div class="item-desc">Classic car-hop, thick milkshakes, cheap reliable burgers.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Boundary Bay Brewery</div>
+      <div class="item-desc">Casual family-friendly brewpub. Solid food, good pints.</div>
+    </div>
+  </div>
+</div>
+
+<div id="p2" class="pane">
+  <div class="base-card">
+    <div class="cost-pill">$950 · 7 nights · beach base camp</div>
+    <div class="base-name">Merle Pl, Blaine / Birch Bay</div>
+    <div class="base-dates">July 6–13</div>
+    <div class="base-addr">8154 Merle Pl, Blaine WA 98230</div>
+    <a class="map-btn" href="https://maps.google.com/?q=8154+Merle+Pl+Blaine+WA" target="_blank">&#128205; Open in Maps</a>
+    <div class="base-vibe">Reimagined beach cabin, golf cart district, steps from tidal flats. Your longest phase — build in 2–3 true rest days. Tidal flat walk at low tide is a daily option for the kid.</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#127939;</span><span class="sec-label">Activities</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Semiahmoo Spit Trail <a class="item-nav" href="https://maps.google.com/?cid=8311827099391817858" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Flat 0.8-mile crushed-rock path into the bay. Harbor seals, herons, eagle nests. Easy morning walk anytime.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">SUP / Kayak · Semiahmoo Bay</div>
+        <div class="item-desc">Shallow, warm, calm — ideal for family rental. Paddle the international boundary line from the water. Book ahead (Semiahmoo Resort). Check tide chart night before.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Tidal Flat Walk · Birch Bay</div>
+        <div class="item-desc">Walk at low tide — crabs, shells, herons. Check tide chart the night before. The 9-year-old will be occupied for hours.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#127860;</span><span class="sec-label">Eat</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Drayton Harbor Oyster Co. <a class="item-nav" href="https://maps.google.com/?cid=2790979460894059936" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Waterfront shack on the Blaine docks. Oysters grilled in garlic butter, seafood tacos. Zero pretense. Mon–Thu opens at noon, Fri–Sun 8am.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">The Washingtonian Bistro</div>
+        <div class="item-desc">Cozy neighborhood anchor. Massive breakfast plates and giant comfort sandwiches.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Edaleen Dairy Parlor</div>
+        <div class="item-desc">Massive hand-scooped cones of local Whatcom County ice cream. Non-negotiable kid stop.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Everybody's Brewing · Ferndale</div>
+        <div class="item-desc">20 min south. Casual brewpub, great burgers and pizza, perfect family energy.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#128664;</span><span class="sec-label">Day Trips</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">White Rock Pier · BC <a class="item-nav" href="https://maps.google.com/?cid=18181856937192088207" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">Longest pier in Canada · fish &amp; chips on the seawall · border crossing novelty</div>
+          <div class="warn-pill">&#10071; Passports required for all 3</div>
+        </div>
+        <div class="trip-drive">30 min</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Diablo Lake · North Cascades <a class="item-nav" href="https://maps.google.com/?cid=10797431223677593965" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">Surreal turquoise glacier lake · Newhalem waterfall trail · scenic Hwy 20 drive. Pack lunch — nothing to buy inside the park.</div>
+        </div>
+        <div class="trip-drive">1.5 hrs</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Artist Point · Mt. Baker <a class="item-nav" href="https://maps.google.com/?cid=1618819242643343771" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">Drive to 5,100ft · walk flat plateau with glaciers both sides · 1 mile round trip, maximum drama</div>
+          <div class="warn-pill">&#10071; Check road conditions: fs.usda.gov</div>
+        </div>
+        <div class="trip-drive">1.5 hrs</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Chain Lakes Loop · Mt. Baker</div>
+          <div class="trip-hook">Best real hike of Blaine week · alpine lakes · wildflower meadows · 6.5 miles moderate. Pack lunch.</div>
+        </div>
+        <div class="trip-drive">1.5 hrs</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Bellingham day <a class="item-nav" href="https://maps.google.com/?cid=18417966778851182219" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">MTB at Galbraith + kayak at Larrabee State Park + lunch at Sandwich Odyssey</div>
+        </div>
+        <div class="trip-drive">40 min</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Lummi Island <a class="item-nav" href="https://maps.google.com/?cid=12065367414383482505" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">5-min ferry · tiny quiet island · Heritage Trust trails · zero tourists · most off-map day of the trip</div>
+        </div>
+        <div class="trip-drive">45 min + ferry</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="p3" class="pane">
+  <div class="base-card">
+    <div class="cost-pill">$561 · 3 nights · Old Town gateway</div>
+    <div class="base-name">F Ave, Anacortes</div>
+    <div class="base-dates">July 13–16</div>
+    <div class="base-addr">1113 F Ave, Anacortes WA 98221</div>
+    <a class="map-btn" href="https://maps.google.com/?q=1113+F+Ave+Anacortes+WA" target="_blank">&#128205; Open in Maps</a>
+    <div class="base-vibe">Old Town split-entry home. Walk to marinas and ferries. Most activity-dense phase — Whidbey Island, Deception Pass, Penn Cove, and Fidalgo Bay all within reach.</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#127939;</span><span class="sec-label">Activities</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Tommy Thompson Rail Trail <a class="item-nav" href="https://maps.google.com/?q=Tommy+Thompson+Trail+Anacortes+WA" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Flat paved 3.3 miles following old rail shoreline to a trestle bridge over Fidalgo Bay. Rent bikes locally or walk it. Great first-afternoon activity.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Deception Pass Bridge <a class="item-nav" href="https://maps.google.com/?cid=18345174629116966935" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Walk the pedestrian spans over the twin suspension bridge. Watch tidal water roar through the rock gorge below. Trails lead down to beach on both sides.
+          <div class="warn-pill">&#10071; Kayak Bowman Bay ONLY — main pass has dangerous tidal currents</div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Ebey's Landing Ridge Trail · Whidbey <a class="item-nav" href="https://maps.google.com/?cid=5078780873304382383" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">5.6-mile loop. Past 19th-century farmsteads, up a windswept bluff with Olympic Mountain views, down to a cobblestone driftwood beach. Budget 3 hrs. Moderate — bluff climb is short and steep but the kid can handle it.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Penn Cove Kayak · Coupeville</div>
+        <div class="item-desc">Very calm protected water. Paddle past the mussel rafts, watch for harbor seals. Ideal family rental — easy for a 9-year-old. Rent from the Coupeville boat ramp.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Washington Park Loop Drive</div>
+        <div class="item-desc">Free 2.2-mile one-way road through old growth to rocky Sound shoreline. 30 minutes. Great easy afternoon add-on.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#127860;</span><span class="sec-label">Eat</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Toby's Tavern · Coupeville <a class="item-nav" href="https://maps.google.com/?cid=12798955922142238028" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Historic pub directly over Penn Cove. Penn Cove mussels steamed in beer, award-winning clam chowder. Creaky floors, no pretense. Opens 11am daily.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Gere-a-Deli · Anacortes</div>
+        <div class="item-desc">Downtown landmark in a beautiful old brick building. Giant deli subs, scratch soups, big cake slabs.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Boondocker's · Anacortes</div>
+        <div class="item-desc">Thick milkshakes, garlic fries, good burgers right off the water.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Chuckanut Manor or Oyster Bar</div>
+        <div class="item-desc">On Chuckanut Drive en route from Blaine. Both sit on the water — fresh oysters, casual atmosphere. Perfect mid-drive stop on arrival day.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Cap Sante Waterfront Grille</div>
+        <div class="item-desc">Casual waterfront, good clam chowder. Or grab fresh fish from marina docks and cook at the house.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="p4" class="pane">
+  <div class="base-card">
+    <div class="cost-pill">$1,049 · 7 nights · private waterfront</div>
+    <div class="base-name">Naomi Cottage, Bremerton</div>
+    <div class="base-dates">July 16–23</div>
+    <div class="base-addr">4938 Naomi Ave, Bremerton WA 98310</div>
+    <a class="map-btn" href="https://maps.google.com/?q=4938+Naomi+Ave+Bremerton+WA+98310" target="_blank">&#128205; Open in Maps</a>
+    <div class="base-vibe">Private waterfront backyard, host-provided kayaks, direct launch ramp down to the narrows. Your deepest saltwater immersion. End the trip slow. Dawn paddles from the backyard are the closing image of the whole trip.</div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#127939;</span><span class="sec-label">Activities</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Backyard Kayak Launch</div>
+        <div class="item-desc">Host-provided kayaks, private ramp. Paddle the narrows anytime. Dawn paddles best — calm water, low boat traffic. Explore further each session as you learn the tides.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Illahee State Park Old-Growth <a class="item-nav" href="https://maps.google.com/?cid=3081129032075562206" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">5 min from cottage. Moss-draped ravine trails to one of WA's largest ancient Douglas Firs, then out onto a driftwood Puget Sound beach. Opens 8am. Discovery Pass required.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Bremerton Naval Museum</div>
+        <div class="item-desc">Free. The 9-year-old will love the destroyer and submarine exhibits. Good easy afternoon option.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#127860;</span><span class="sec-label">Eat</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Boat Shed Restaurant <a class="item-nav" href="https://maps.google.com/?cid=17434337422900374749" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Outdoor deck cantilevered over the saltwater narrows. Award-winning Manila clam broth, local fish, pub burgers as boats pass by. Opens 11am daily.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Sluys Poulsbo Bakery <a class="item-nav" href="https://maps.google.com/?cid=17828447703086320734" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">30 min north. Viking Cups + cinnamon rolls the size of your face. Opens 5am — arrive before 9am or expect a long line.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Tizley's Europub · Poulsbo</div>
+        <div class="item-desc">Casual European pub food, good burgers, kid-friendly. Good lunch option on a Poulsbo day.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Hood Canal spot prawns</div>
+        <div class="item-desc">In season in July — find them at a local dock vendor or seafood counter. Cook at the cottage on the back deck. Worth the effort.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Pike Place Market · Seattle</div>
+        <div class="item-desc">On Seattle ferry day — bread bowl chowder, Piroshky Piroshky, Beecher's cheese curds. Graze your way through.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">&#128664;</span><span class="sec-label">Day Trips</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Seattle fast ferry <a class="item-nav" href="https://maps.google.com/?cid=11987554701757249752" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">Walk to terminal · 60-min crossing · no car · Pike Place + Chihuly Garden + waterfront. Buy WSF tickets online. Last ferry back ~9–10pm.</div>
+        </div>
+        <div class="trip-drive">Walk</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Poulsbo "Little Norway" <a class="item-nav" href="https://maps.google.com/?cid=17828447703086320734" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">Norwegian waterfront town · Sluys Bakery · Liberty Bay kayak option · Viking-themed kid-friendly main street</div>
+        </div>
+        <div class="trip-drive">30 min</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Fort Worden · Port Townsend <a class="item-nav" href="https://maps.google.com/?cid=11977208350938866480" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">1898 concrete gun bunkers the kid can explore · lighthouse · Victorian town main street · one of WA's best state parks</div>
+        </div>
+        <div class="trip-drive">~1 hr</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Bainbridge Island <a class="item-nav" href="https://maps.google.com/?q=Winslow+Bainbridge+Island+WA" target="_blank">&#128205; Nav</a></div>
+          <div class="trip-hook">Charming Winslow waterfront town · easy bike loop · great food scene · different energy from Bremerton. Drive direct or ferry combo from Seattle.</div>
+        </div>
+        <div class="trip-drive">35 min</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:#FCEBEB;border-radius:10px;padding:12px 14px;margin-top:4px">
+    <div style="font-size:12px;font-weight:700;color:#A32D2D;margin-bottom:6px">&#10071; Departure reminder</div>
+    <div style="font-size:13px;color:#791F1F;line-height:1.5">Build 3+ hours Bremerton to SEA in summer. Ferry waits + traffic = no margin. Bremerton car ferry to Seattle runs ~every 1–2 hrs.</div>
+  </div>
+</div>
+
+<div id="top10" class="pane">
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">Ranked by uniqueness + kid factor + experience quality. Things that would genuinely sting to miss.</div>
+  <div class="section-card">
+    <div class="top10-item">
+      <div class="top10-num">1</div>
+      <div><div class="top10-name">Deception Pass Bridge</div><div class="top10-why">Walk the spans, watch tidal water roar through the rock gorge. Nothing else in Washington looks like this.</div><a class="item-nav" href="https://maps.google.com/?cid=18345174629116966935" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">2</div>
+      <div><div class="top10-name">Diablo Lake Overlook</div><div class="top10-why">Glacier turquoise so extreme it looks fake. Easy pullout stop, permanent memory.</div><a class="item-nav" href="https://maps.google.com/?cid=10797431223677593965" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">3</div>
+      <div><div class="top10-name">Naomi Cottage backyard kayak</div><div class="top10-why">Dawn paddle on the narrows from your own ramp. Private, host kayaks, zero logistics. The closing image of the trip.</div></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">4</div>
+      <div><div class="top10-name">Ebey's Landing Ridge Trail</div><div class="top10-why">Best single hike. Farmsteads + Olympic bluff views + cobblestone driftwood beach in one 5.6-mile loop.</div><a class="item-nav" href="https://maps.google.com/?cid=5078780873304382383" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">5</div>
+      <div><div class="top10-name">Toby's Tavern, Coupeville</div><div class="top10-why">Penn Cove mussels steamed in beer, directly over the water. The most "only here" meal of the trip.</div><a class="item-nav" href="https://maps.google.com/?cid=12798955922142238028" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">6</div>
+      <div><div class="top10-name">Artist Point · Mt. Baker</div><div class="top10-why">Drive to 5,100ft, walk the plateau with glaciers on both sides. Near-zero effort, maximum mountain drama.</div><a class="item-nav" href="https://maps.google.com/?cid=1618819242643343771" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">7</div>
+      <div><div class="top10-name">Seattle fast ferry from Bremerton</div><div class="top10-why">Walk to the terminal, 60-min crossing, step off into Pike Place. Best way to do Seattle without a car.</div><a class="item-nav" href="https://maps.google.com/?cid=11987554701757249752" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">8</div>
+      <div><div class="top10-name">White Rock Pier, BC</div><div class="top10-why">Cross the border, walk the longest pier in Canada, fish &amp; chips on the seawall. 30 min from base.</div><a class="item-nav" href="https://maps.google.com/?cid=18181856937192088207" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">9</div>
+      <div><div class="top10-name">Sluys Poulsbo Bakery</div><div class="top10-why">Viking Cups + cinnamon rolls the size of your face. The 9-year-old will put this on the highlight reel.</div><a class="item-nav" href="https://maps.google.com/?cid=17828447703086320734" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-num">10</div>
+      <div><div class="top10-name">Lummi Island day trip</div><div class="top10-why">5-min ferry, tiny quiet island, zero tourists, Heritage Trust trails. Most off-map experience of the trip.</div><a class="item-nav" href="https://maps.google.com/?cid=12065367414383482505" target="_blank" style="margin-top:5px;display:inline-flex">&#128205; Nav</a></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function sw(id){
+  document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  const order=['overview','seattle','cruise','p1','p2','p3','p4','top10'];
+  document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('on');
+  window.scrollTo(0,0);
+}
+function tog(hdr){
+  const body=hdr.nextElementSibling;
+  const chev=hdr.querySelector('.sec-chev');
+  const open=body.classList.contains('op');
+  body.classList.toggle('op',!open);
+  chev.classList.toggle('op',!open);
+}
+</script>
+</body>
+</html>
