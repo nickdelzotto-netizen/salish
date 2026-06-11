@@ -44,7 +44,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
 .trip-row{display:grid;grid-template-columns:1fr auto auto;align-items:start;gap:8px;padding:10px 14px;border-bottom:1px solid #f0efe8}
 .trip-row:last-child{border-bottom:none}
 .trip-name{font-size:14px;font-weight:600;color:#1a1a18}
-.trip-drive">font-size:12px;color:#888780;white-space:nowrap;padding-top:2px}
+.trip-drive{font-size:12px;color:#888780;white-space:nowrap;padding-top:2px}
 .trip-hook{font-size:12px;color:#5F5E5A;margin-top:2px;grid-column:1/-1}
 .port-row{padding:10px 14px;border-bottom:1px solid #f0efe8}
 .port-row:last-child{border-bottom:none}
@@ -58,8 +58,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
 .top10-why{font-size:12px;color:#5F5E5A;margin-top:2px;line-height:1.5}
 .section-card{background:#fff;border-radius:10px;border:1px solid #e0dfd8;overflow:hidden;margin-bottom:10px}
 .scroll-top{position:fixed;bottom:16px;right:16px;background:rgba(24,95,165,0.9);color:#fff;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:18px;font-weight:bold;box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:2000}
-/* Map Styling */
 #trip-map{width:100%;height:320px;border-radius:8px;border:1px solid #e0dfd8;margin-top:12px;z-index:1}
+
+/* Data Pill Design for Trail Info */
+.trail-pill{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:12px;margin-right:4px;margin-bottom:4px}
+.p-type{background:#E6F1FB;color:#185FA5}
+.p-dist{background:#f5f4f0;color:#5F5E5A}
+.p-vibe{background:#EAF3DE;color:#3B6D11}
+.rental-box{background:#FFF9E6;border:1px dashed #D9A700;border-radius:8px;padding:10px;margin:8px 14px;font-size:13px}
+.rental-link{color:#B37D00;font-weight:600;text-decoration:underline}
 </style>
 </head>
 <body>
@@ -77,15 +84,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
   <button class="tab" onclick="sw('p2')">Blaine</button>
   <button class="tab" onclick="sw('p3')">Anacortes</button>
   <button class="tab" onclick="sw('p4')">Bremerton</button>
+  <button class="tab" onclick="sw('trails')">Trails &amp; Wheels</button>
   <button class="tab" onclick="sw('top10')">Top 10</button>
 </div>
 
-<!-- OVERVIEW WITH INTERACTIVE MAP -->
+<!-- OVERVIEW -->
 <div id="overview" class="pane on">
   <div class="base-card">
     <div style="font-size:13px;color:#5F5E5A;line-height:1.7;margin-bottom:12px">Full itinerary loop: fly into Seattle → cruise Alaska → road trip Salish Sea → fly home.</div>
     
-    <!-- Dynamic map container replaces static image slot -->
     <div id="trip-map"></div>
 
     <div style="display:flex;flex-direction:column;gap:8px;margin-top:16px">
@@ -109,7 +116,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
         <div><div style="font-size:13px;font-weight:600">&#127968; F Ave, Anacortes</div><div style="font-size:12px;color:#888780">July 13–16 · 3 nights · $561</div></div>
         <a class="map-btn" href="https://maps.google.com/?q=1113+F+Ave+Anacortes+WA" target="_blank">&#128205; Map</a>
       </div>
-      <div style="display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px">
+      <div style="grid-template-columns:1fr auto;align-items:center;padding:8px 10px;background:#f5f4f0;border-radius:8px;display:grid">
         <div><div style="font-size:13px;font-weight:600">&#127968; Naomi Cottage, Bremerton</div><div style="font-size:12px;color:#888780">July 16–23 · 7 nights · $1,049</div></div>
         <a class="map-btn" href="https://maps.google.com/?q=4938+Naomi+Ave+Bremerton+WA" target="_blank">&#128205; Map</a>
       </div>
@@ -305,35 +312,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
 
   <div class="section">
     <div class="sec-hdr" onclick="tog(this)">
-      <div class="sec-hdr-left"><span class="sec-icon">&#127860;</span><span class="sec-label">Eat &amp; Sweets</span></div>
-      <span class="sec-chev">&#8964;</span>
-    </div>
-    <div class="sec-body">
-      <div class="item">
-        <div class="item-name">The C Shop (Birch Bay) <a class="item-nav" href="https://maps.google.com/?cid=12140810793139369324" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Vintage seasonal beachside candy counter. Watch live saltwater taffy pulls and housemade chocolates being prepared. Core highlight loop candidate.</div>
-      </div>
-      <div class="item">
-        <div class="item-name">Drayton Harbor Oyster Co. <a class="item-nav" href="https://maps.google.com/?cid=2790979460894059936" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Waterfront shack on the Blaine docks. Oysters grilled in garlic butter, seafood tacos. Zero pretense. Mon–Thu opens at noon, Fri–Sun 8am.</div>
-      </div>
-      <div class="item">
-        <div class="item-name">The Railway Café <a class="item-nav" href="https://maps.google.com/?cid=6819616092040974261" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Bright red historic railroad caboose dish-serving breakfast wraps, good local espresso, and a great open-air morning harbor patio.</div>
-      </div>
-      <div class="item">
-        <div class="item-name">Peace Arch City Café</div>
-        <div class="item-desc">Coziest downtown neighborhood anchor. Hot paninis, scratch soups, and an extensive kid-friendly breakfast lineup.</div>
-      </div>
-      <div class="item">
-        <div class="item-name">Edaleen Dairy Parlor</div>
-        <div class="item-desc">Massive hand-scooped cones of local Whatcom County ice cream. Non-negotiable kid stop.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-hdr" onclick="tog(this)">
       <div class="sec-hdr-left"><span class="sec-icon">&#127966;</span><span class="sec-label">Day Trips</span></div>
       <span class="sec-chev">&#8964;</span>
     </div>
@@ -395,7 +373,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
       </div>
       <div class="item">
         <div class="item-name">Deception Pass Bridge <a class="item-nav" href="https://maps.google.com/?cid=18345174629116966935" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Walk pedestrian spans over the rock gorge gorge. Watch roaring tidal waters below.
+        <div class="item-desc">Walk pedestrian spans over the rock gorge canyon. Watch roaring tidal waters below.
           <div class="warn-pill">&#10071; Launch kayaks at protected Bowman Bay ONLY; never enter main pass</div>
         </div>
       </div>
@@ -406,27 +384,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
       <div class="item">
         <div class="item-name">Fort Casey Bunkers <a class="item-nav" href="https://maps.google.com/?cid=16905663740117079635" target="_blank">&#128205; Nav</a></div>
         <div class="item-desc">Historic 1890s coastal defense concrete fort. Huge maze of dark corridors, tunnels, and old gun batteries. Bring a flashlight for the kid to explore.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="sec-hdr" onclick="tog(this)">
-      <div class="sec-hdr-left"><span class="sec-icon">&#127860;</span><span class="sec-label">Eat</span></div>
-      <span class="sec-chev">&#8964;</span>
-    </div>
-    <div class="sec-body">
-      <div class="item">
-        <div class="item-name">Toby's Tavern (Coupeville) <a class="item-nav" href="https://maps.google.com/?cid=12798955922142238028" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Sits directly over the water on the historic wharf. World-famous Penn Cove mussels steamed in beer, creaky wooden floors, zero pretense.</div>
-      </div>
-      <div class="item">
-        <div class="item-name">Gere-a-Deli (Anacortes) <a class="item-nav" href="https://maps.google.com/?cid=4200632314515598696" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Bustling downtown landmark in a classic brick building. Massive New York-style deli subs, giant cake slabs, and scratch soups. Fun local toy/sweet shelf collection inside.</div>
-      </div>
-      <div class="item">
-        <div class="item-name">Chuckanut Manor</div>
-        <div class="item-desc">En route from Blaine along Chuckanut Drive. Waterfront seating, fresh local oysters, and highly reliable casual mid-drive lunch plates.</div>
       </div>
     </div>
   </div>
@@ -459,50 +416,97 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
       </div>
     </div>
   </div>
+</div>
 
+<!-- DYNAMIC TRAILS & WHEELS ACCORDION PHASE -->
+<div id="trails" class="pane">
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px">Curated family trails and logistics links for the land loops. Tap to expand.</div>
+  
+  <!-- Bellingham -->
   <div class="section">
     <div class="sec-hdr" onclick="tog(this)">
-      <div class="sec-hdr-left"><span class="sec-icon">&#127860;</span><span class="sec-label">Eat &amp; Bakeries</span></div>
+      <div class="sec-hdr-left"><span class="sec-icon">🌲</span><span class="sec-label">Bellingham Trails &amp; Rentals</span></div>
       <span class="sec-chev">&#8964;</span>
     </div>
     <div class="sec-body">
-      <div class="item">
-        <div class="item-name">Sluys Poulsbo Bakery <a class="item-nav" href="https://maps.google.com/?cid=17828447703086320734" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Legendary historic Viking bakery. World-class giant "Viking Cups," specialty donuts, and massive cinnamon rolls. Arrive before 9am to avoid the line wrapping around the block.</div>
+      <div class="rental-box">
+        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.wmbcfinder.org/" target="_blank">Galbraith Mountain Rentals / Fanatik</a> — Hub for performance trail mountain bike setups near Galbraith network.
       </div>
       <div class="item">
-        <div class="item-name">Boat Shed Restaurant <a class="item-nav" href="https://maps.google.com/?cid=17434337422900374749" target="_blank">&#128205; Nav</a></div>
-        <div class="item-desc">Outdoor deck cantilevered over the saltwater narrows. Manila clam broth, local fish, pub burgers as boats pass by.</div>
+        <div class="item-name">Chain Lakes Loop</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🥾 Hike</span><span class="trail-pill p-dist">6.5 mi Loop</span><span class="trail-pill p-vibe">⛰️ Alpine Views</span></div>
+        <div class="item-desc">High mountain terrain around Mt. Baker. High wildflowers and dramatic alpine exposure. Best left to a high-energy weather window.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Whatcom Falls Park Trails</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🚶 Walk</span><span class="trail-pill p-dist">Up to 4 mi</span><span class="trail-pill p-vibe">🍃 Rainforest Flat</span></div>
+        <div class="item-desc">Extremely easy, shaded deep woods network inside city lines. Stunning 1930s historic stone footbridge framing heavy active waterfalls. Minimal physical impact.</div>
       </div>
     </div>
   </div>
 
+  <!-- Blaine / Birch Bay -->
   <div class="section">
     <div class="sec-hdr" onclick="tog(this)">
-      <div class="sec-hdr-left"><span class="sec-icon">&#128664;</span><span class="sec-label">Day Trips</span></div>
+      <div class="sec-hdr-left"><span class="sec-icon">🏖️</span><span class="sec-label">Blaine &amp; Birch Bay Trails &amp; Rentals</span></div>
       <span class="sec-chev">&#8964;</span>
     </div>
     <div class="sec-body">
-      <div class="trip-row">
-        <div>
-          <div class="trip-name">Seattle Fast Ferry <a class="item-nav" href="https://maps.google.com/?cid=11987554701757249752" target="_blank">&#128205; Nav</a></div>
-          <div class="trip-hook">Walk to terminal. 60-min foot-passenger crossing. Steps straight off onto Seattle waterfront/Pike Place. Best car-free city day trip.</div>
-        </div>
-        <div class="trip-drive">Walk</div>
+      <div class="rental-box">
+        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.semiahmoo.com/activities.php" target="_blank">Semiahmoo Resort Activity Desk</a> — Perfect place to lock in casual cruiser bikes for sweeping flat coastal spit lanes.
       </div>
-      <div class="trip-row">
-        <div>
-          <div class="trip-name">Poulsbo "Little Norway"</div>
-          <div class="trip-hook">Waterfront walking paths, Scandinavian themed downtown main street, marine parks, and cozy local cafes. Beautiful afternoon vibe.</div>
-        </div>
-        <div class="trip-drive">30 min</div>
+      <div class="item">
+        <div class="item-name">Semiahmoo Spit Trail</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🚲 Bike/Walk</span><span class="trail-pill p-dist">1.6 mi RT</span><span class="trail-pill p-vibe">🌊 Dead Flat / Paved</span></div>
+        <div class="item-desc">Zero car traffic. Paved line pacing right out down a skinny salt harbor point. Safe family biking terrain. Look for eagle nests and resting seals.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Boundary Bay / Centennial Sand Flats</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🚶 Tidal Walk</span><span class="trail-pill p-dist">Varies</span><span class="trail-pill p-vibe">🦀 Sand Pools</span></div>
+        <div class="item-desc">Massive international sand flats just over the border boundary line. Low tide pulls back immensely far, creating endless shallow exploration fields for the kid.</div>
       </div>
     </div>
   </div>
 
-  <div style="background:#FCEBEB;border-radius:10px;padding:12px 14px;margin-top:4px">
-    <div style="font-size:12px;font-weight:700;color:#A32D2D;margin-bottom:6px">&#10071; Departure Reminder</div>
-    <div style="font-size:13px;color:#791F1F;line-height:1.5">Build 3+ hours Bremerton to SEA airport in summer. Ferry vehicle queues + heavy I-5 bottlenecking leaves zero margin for error.</div>
+  <!-- Anacortes -->
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🦅</span><span class="sec-label">Anacortes &amp; Whidbey Trails &amp; Rentals</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="rental-box">
+        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.skagitcyclecenter.com/" target="_blank">Skagit Cycle Center</a> — Local shop option on Fidalgo Island for full hybrid and family road frames before tackling trestles.
+      </div>
+      <div class="item">
+        <div class="item-name">Tommy Thompson Rail Trail</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🚲 Bike/Walk</span><span class="trail-pill p-dist">3.3 mi One-Way</span><span class="trail-pill p-vibe">🌉 Overwater Trestle</span></div>
+        <div class="item-desc">Flawlessly paved historical rail path slicing straight over Fidalgo Bay across a massive, long wooden open-water trestle framework. Highly cinematic.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Ebey's Landing Ridge Trail</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🥾 Hike</span><span class="trail-pill p-dist">5.6 mi Loop</span><span class="trail-pill p-vibe">🌬️ Ocean Bluff Steep</span></div>
+        <div class="item-desc">Coastal mountain farmsteads leading directly up onto sweeping, breezy ridge bluffs before descending onto giant cobblestone marine drift beach loops. Dynamic drop views.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bremerton -->
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🛶</span><span class="sec-label">Bremerton Trails &amp; Backyard Paddles</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="rental-box">
+        🛶 <b>Watercraft Logistics:</b> Backyard features a private gravel ramp with host-provided kayaks. Zero transport or trailer hassle required.
+      </div>
+      <div class="item">
+        <div class="item-name">Illahee State Park Loop</div>
+        <div style="margin:4px 0"><span class="trail-pill p-type">🥾 Hike</span><span class="trail-pill p-dist">1.5 mi</span><span class="trail-pill p-vibe">🌲 Old Growth Wood</span></div>
+        <div class="item-desc">Deep hidden coastal ravine loop paths weaving past colossal ancient Douglas Firs. Walks drop right down into Puget Sound stony shell shorelines. 5 minutes away.</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -531,11 +535,10 @@ function sw(id){
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   document.getElementById(id).classList.add('on');
-  const order=['overview','seattle','cruise','p1','p2','p3','p4','top10'];
+  const order=['overview','seattle','cruise','p1','p2','p3','p4','trails','top10'];
   document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('on');
   window.scrollTo(0,0);
   
-  // Leaflet hack: recalculate size on tab show so layout doesn't break
   if(id === 'overview' && map) {
     setTimeout(() => { map.invalidateSize(); }, 50);
   }
@@ -568,17 +571,14 @@ window.onscroll = function() {
 // --- LEAFLET INTERACTIVE MAP INITIALIZATION ---
 let map;
 document.addEventListener("DOMContentLoaded", function() {
-  // Center map generally around the Puget Sound / Salish region
   map = L.map('trip-map').setView([48.15, -122.45], 8);
 
-  // Load high-quality, lightweight open source map tiles
   L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
     subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
 
-  // Geocoded data points for your Base Camps
   const routePoints = [
     { name: "1. Seattle (Pre-Cruise)", lat: 47.6223, lng: -122.3504 },
     { name: "2. Bellingham Base", lat: 48.8115, lng: -122.4281 },
@@ -587,17 +587,14 @@ document.addEventListener("DOMContentLoaded", function() {
     { name: "5. Bremerton Waterfront", lat: 47.5954, lng: -122.6185 }
   ];
 
-  // Collect coordinates to compile the driving trail path line
   const latLngs = [];
 
-  // Drop custom pin markers on the map
   routePoints.forEach(function(pt) {
     const coord = [pt.lat, pt.lng];
     latLngs.push(coord);
     L.marker(coord).addTo(map).bindPopup("<b>" + pt.name + "</b>");
   });
 
-  // Draw a bright blue line following your path sequence
   L.polyline(latLngs, {
     color: '#185FA5',
     weight: 3.5,
@@ -605,7 +602,6 @@ document.addEventListener("DOMContentLoaded", function() {
     dashArray: '6, 6'
   }).addTo(map);
   
-  // Auto-fit the camera perfectly around all your stops
   map.fitBounds(L.polyline(latLngs).getBounds(), { padding: [20, 20] });
 });
 
