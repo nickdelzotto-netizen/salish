@@ -86,6 +86,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
   <button class="tab" onclick="sw('p4')">Bremerton</button>
   <button class="tab" onclick="sw('trails')">Trails &amp; Wheels</button>
   <button class="tab" onclick="sw('top10')">Top 10</button>
+  <button class="tab" onclick="sw('naturalist')">Naturalist Guide</button>
 </div>
 
 <!-- OVERVIEW -->
@@ -535,7 +536,7 @@ function sw(id){
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   document.getElementById(id).classList.add('on');
-  const order=['overview','seattle','cruise','p1','p2','p3','p4','trails','top10'];
+  const order=['overview','seattle','cruise','p1','p2','p3','p4','trails','top10', 'naturalist'];
   document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('on');
   window.scrollTo(0,0);
   
@@ -607,5 +608,117 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById("scrollTopBtn").style.display = "none";
 </script>
+    <div id="naturalist" class="pane">
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">
+    Field guide for wildlife spotting across the Inside Passage and Salish Sea loops. Keep your 8x42 optics ready on deck and at the shoreline.
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🐋</span><span class="sec-label">Marine Mammals</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Orca (Killer Whale) <span class="trail-pill p-type">Resident & Transient</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Inside Passage, Semiahmoo Bay, San Juan Ferries</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Jet-black body with a stark white eye patch and a gray saddle patch behind the dorsal fin. Adult males feature a towering, triangular dorsal fin up to 6 feet tall. 
+          <br><b>Behavior:</b> Look for sharp, explosive blows. Transients travel in quiet, tactical hunting packs of 2–6, while Residents travel in larger, vocal family pods. Watch for breach or spy-hop sequences.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Humpback Whale <span class="trail-pill p-type">Baleen Whale</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Inside Passage (southbound lanes), Juneau whale watching</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Massive dark body with a prominent dorsal hump and long, white pectoral flippers easily visible through optics when rolling. 
+          <br><b>Behavior:</b> Signals a deep dive by arching its back and throwing its wide tail fluke clear out of the water. Look for massive, bushy, 10-foot blows on glassy mornings.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Harbor Seal <span class="trail-pill p-type">Pinniped</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Semiahmoo Spit, White Rock Pier, Naomi Cottage backyard narrows</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Plump, silvery-gray or mottled brown body with no external ear flaps. "Bow-riding" or trailing behind kayaks.
+          <br><b>Behavior:</b> Pops up closely to docks, structures, and slow-moving watercraft like a floating bowling ball. Often hauls out in clusters on sandbars, log booms, or rocky reefs at lower tides.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🦅</span><span class="sec-label">Coastal & Apex Avian Species</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Bald Eagle <span class="trail-pill p-vibe">Raptor</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Inside Passage sea days, Semiahmoo Spit old nests, Fidalgo Bay trestle</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Imposing size, dark chocolate brown body contrasted against a pure white head and tail. Massive hook-shaped bright yellow bill.
+          <br><b>Behavior:</b> Scans for salmon from prominent, dead old-growth tree snags. Harassed frequently by crows or gulls when carrying a catch. Look high on coastal tree structures along narrow waterways.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Great Blue Heron <span class="trail-pill p-vibe">Wader</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Birch Bay State Park tidepools, Semiahmoo Spit shallows</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Large, tall frame with blue-gray plumage, a shaggy chest crest, and a long, dagger-like yellow bill. In flight, it tucks its neck into a tight 'S' shape.
+          <br><b>Behavior:</b> Stands perfectly motionless for long periods in shallow water or mudflats, tracking tiny fish or crabs before striking with blinding speed.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Pigeon Guillemot <span class="trail-pill p-vibe">Alcid</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Larrabee State Park cliffs, Deception Pass rapids, ferry docks</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Compact, soot-black body distinguished by sharp white wing patches with black wedges. Features bright, vivid coral-red legs and a red interior mouth lining.
+          <br><b>Behavior:</b> Dives efficiently in fast-moving water columns near sandstone cliffs and rocky drop-offs. Emits a high-pitched whistling squeak when aggregating on water surfaces.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🦀</span><span class="sec-label">Intertidal & Tidal Flat Marine Life</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Ochre Sea Star <span class="trail-pill p-dist">Invertebrate</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Birch Bay low tide, Centennial Sand Flats rocky outcrops</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Robust, stiff five-armed star structure ranging in intense shades of deep purple, bright orange, or brown. Textured with hard, white calcareous spines.
+          <br><b>Behavior:</b> Clings tightly to wave-beaten rocks, barnacle clusters, and structural pilings in the mid-to-lower intertidal zones using rows of secure suction tube feet.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Pacific Dungeness & Red Rock Crab <span class="trail-pill p-dist">Crustacean</span></div>
+        <div style="margin:4px 0">
+          <span class="trail-pill p-dist">📍 Best Spots: Birch Bay mudflats, Boundary Bay pools</span>
+        </div>
+        <div class="item-desc">
+          <b>Field Marks:</b> Dungeness has a wide, fan-shaped purplish-brown shell with white-tipped claws. Red Rock is smaller, thickset, uniform brick-red with distinct heavy black tips on its claws.
+          <br><b>Behavior:</b> Scurries sideways to bury itself backward into loose sand when exposed by receding tides. Found easily by turning over large pebbles or searching shallow eelgrass drainage paths.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
