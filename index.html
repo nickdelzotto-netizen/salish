@@ -88,6 +88,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
   <button class="tab" onclick="sw('trails')">Trails &amp; Wheels</button>
   <button class="tab" onclick="sw('top10')">Top 10</button>
   <button class="tab" onclick="sw('naturalist')">Naturalist Guide</button>
+  <button class="tab" onclick="sw('driving')">Driving Guide</button>
   <button class="tab" onclick="sw('logistics')">Logistics</button>
 </div>
 
@@ -831,7 +832,7 @@ function sw(id){
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   document.getElementById(id).classList.add('on');
-  const order=['overview','seattle','cruise','itinerary','p1','p2','p3','p4','trails','top10', 'naturalist','logistics'];
+  const order=['overview','seattle','cruise','itinerary','p1','p2','p3','p4','trails','top10', 'naturalist','driving','logistics'];
   document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('on');
   window.scrollTo(0,0);
   
@@ -1016,6 +1017,56 @@ document.getElementById("scrollTopBtn").style.display = "none";
   </div>
 </div>
 
+<!-- DRIVING GUIDE -->
+<div id="driving" class="pane">
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">Scenic routing for the road legs — avoiding busy highways where it doesn't cost much time. Leaning relaxed since travel days are already long.</div>
+
+  <div class="section-card">
+    <div class="trip-row">
+      <div>
+        <div class="trip-name">SEA Airport &#8594; Bellingham <span class="trail-pill p-vibe">relaxed</span></div>
+        <div class="trip-hook">I-5 north to La Conner (small detour off I-5) for a lunch/leg-stretch stop. Continue north, exit Burlington (Exit 231) onto Chuckanut Drive (SR-11) instead of staying on I-5 — sandstone cliffs, San Juan Islands views. Chuckanut Drive feeds directly into Fairhaven, Bellingham's historic district, for a second stop before the final short drive to base.
+          <a class="item-nav" href="https://www.google.com/maps/dir/?api=1&origin=Seattle-Tacoma+International+Airport&destination=Bellingham,WA&waypoints=La+Conner,WA|Chuckanut+Drive,WA&dirflg=h" target="_blank">&#128205; Route</a>
+        </div>
+      </div>
+      <div class="trip-drive">~2–2.5 hrs w/ stops</div>
+    </div>
+    <div class="trip-row">
+      <div>
+        <div class="trip-name">Bellingham &#8594; Blaine</div>
+        <div class="trip-hook">Short hop. Route through Birch Bay instead of straight highway for one more coastal glimpse if time allows.</div>
+      </div>
+      <div class="trip-drive">~30–40 min</div>
+    </div>
+    <div class="trip-row">
+      <div>
+        <div class="trip-name">Blaine &#8594; Anacortes <span class="trail-pill p-vibe">Chuckanut Drive</span></div>
+        <div class="trip-hook">Scenic WA-11 routing through Chuckanut Drive, bypassing I-5.
+          <a class="item-nav" href="https://www.google.com/maps/dir/?api=1&origin=Blaine,WA&destination=Anacortes,WA&dirflg=h" target="_blank">&#128205; Route</a>
+        </div>
+      </div>
+      <div class="trip-drive">~1.5 hrs</div>
+    </div>
+    <div class="trip-row">
+      <div>
+        <div class="trip-name">Anacortes &#8594; Bremerton <span class="trail-pill p-vibe">Whidbey Rural Explorer</span></div>
+        <div class="trip-hook">Routes through historic Coupeville and central Whidbey farmland via scenic backroads, then the Clinton ferry — eliminating modern highway stretches.
+          <a class="item-nav" href="https://www.google.com/maps/dir/?api=1&origin=Deception+Pass+State+Park&destination=Clinton+Ferry+Terminal,Clinton,WA&dirflg=h" target="_blank">&#128205; Route</a>
+        </div>
+        <div class="warn-pill">&#10071; Clinton–Mukilteo ferry: no vehicle reservations, but arrive early in peak summer</div>
+      </div>
+      <div class="trip-drive">~2 hrs incl. ferry</div>
+    </div>
+    <div class="trip-row">
+      <div>
+        <div class="trip-name">Bremerton &#8594; SEA Airport <span class="trail-pill p-vibe">return + drop car</span></div>
+        <div class="trip-hook">About timing, not scenery. Build 3+ hrs for ferry waits and summer traffic before your flight.</div>
+      </div>
+      <div class="trip-drive">~1–1.5 hrs + ferry buffer</div>
+    </div>
+  </div>
+</div>
+
 <!-- LOGISTICS -->
 <div id="logistics" class="pane">
 
@@ -1087,6 +1138,30 @@ document.getElementById("scrollTopBtn").style.display = "none";
     <div class="sec-body">
       <div class="item"><div class="item-desc"><b>Hold mail:</b> Submit a USPS mail-hold request for the full 27-night stretch.</div></div>
       <div class="item"><div class="item-desc"><b>Financial notices:</b> Most cards no longer require travel notifications, but check banking apps so an Alaska/Canada charge doesn't trigger a fraud freeze.</div></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🧳</span><span class="sec-label">Getting There (Airport, Hotel, Pier, Car)</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Leg 1 · SEA Airport → Mediterranean Inn <span class="trail-pill p-vibe">5 people + luggage</span></div>
+        <div class="item-desc">Pre-book a private SUV/van transfer (Seattle Shuttle or similar) — driver meets you at baggage claim, handles luggage. ~$85+ flat rate for the Queen Anne zone. Rideshare XL is cheaper (~$55–75) but riskier for fitting 5 people + heavy bags same-day. Recommend booking the van ahead.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Leg 2 · Hotel → Pier 91 <span class="trail-pill p-vibe">5 people, next morning</span></div>
+        <div class="item-desc">Mediterranean Inn runs its own cruise-day shuttle — sign up at check-in, ~$10–20/person one-way (~$50–100 total for 5). Cheaper and easier than a van with luggage; Pier 91 isn't walkable. Depart hotel 9:30–10:30am to clear traffic, check-in, and security.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Leg 3 · Pier 91 → SEA Airport <span class="trail-pill p-vibe">5 people, disembark day</span></div>
+        <div class="item-desc">Same private van/rideshare math as Leg 1, reversed. This is also when mother &amp; brother split off to fly home — time it around their flight, separate from the rental car pickup.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Leg 4 · Airport → Rental Car → Bellingham <span class="trail-pill p-vibe">3 people, remainder of trip</span></div>
+        <div class="item-desc">Pick up the rental car at SEA airport right after disembarkation rather than downtown — saves a transfer leg, and it's where you return it 27 nights later too. Book ahead for July peak season. Consider a size up from a sedan given a month of luggage.</div>
+      </div>
     </div>
   </div>
 
