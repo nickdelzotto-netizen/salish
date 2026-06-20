@@ -87,8 +87,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
   <button class="tab" onclick="sw('p4')">Bremerton</button>
   <button class="tab" onclick="sw('trails')">Trails &amp; Wheels</button>
   <button class="tab" onclick="sw('top10')">Top 10</button>
+  <button class="tab" onclick="sw('bestof')">Best Of</button>
   <button class="tab" onclick="sw('naturalist')">Naturalist Guide</button>
   <button class="tab" onclick="sw('driving')">Driving Guide</button>
+  <button class="tab" onclick="sw('rainyday')">Rainy Day</button>
   <button class="tab" onclick="sw('logistics')">Logistics</button>
 </div>
 
@@ -126,9 +128,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
       </div>
     </div>
     
-    <div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0efe8;display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <div style="background:#f5f4f0;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#888780;margin-bottom:4px">Salish Sea cost</div><div style="font-size:22px;font-weight:700;color:#1a1a18">$2,631</div></div>
+    <div style="margin-top:12px;padding-top:12px;border-top:1px solid #f0efe8;display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+      <div style="background:#f5f4f0;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#888780;margin-bottom:4px">Lodging cost</div><div style="font-size:22px;font-weight:700;color:#1a1a18">$2,631</div></div>
       <div style="background:#f5f4f0;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#888780;margin-bottom:4px">Per night</div><div style="font-size:22px;font-weight:700;color:#1a1a18">$146</div></div>
+      <div style="background:#f5f4f0;border-radius:8px;padding:10px;text-align:center"><div style="font-size:11px;color:#888780;margin-bottom:4px">Rental car</div><div style="font-size:22px;font-weight:700;color:#1a1a18">$800</div></div>
     </div>
   </div>
 </div>
@@ -313,6 +316,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     <div class="item">
       <div class="item-name">Wildcat Cove · Larrabee State Park</div>
       <div class="item-desc">Kayak rental — paddle alongside honeycomb sandstone cliffs with San Juan Island views. Half-day paddle.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Bellewood Acres <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Bellewood+Farms+Lynden+WA" target="_blank">📍 Nav</a></div>
+      <div class="item-desc">Apple farm — orchard walks, fresh pie, seasonal activities. Good half-day if there's a gap in the schedule.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Bellingham Bells (minor league baseball) <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Joe+Martin+Field+Bellingham+WA" target="_blank">📍 Nav</a></div>
+      <div class="item-desc">Casual evening game if schedule lines up — kid-friendly promos and giveaways are common.</div>
     </div>
   </div>
 
@@ -581,6 +592,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
         <div class="item-desc">Fresh beer-steamed Penn Cove mussels over creaky wood planks above the water. Top 10 pick.</div>
       </div>
       <div class="item">
+        <div class="item-name">Front Street Grill · Coupeville <span class="trail-pill p-vibe">Toby's alternative</span></div>
+        <div class="item-desc">Also serves Penn Cove mussels with waterfront views — good backup if Toby's has a long wait.</div>
+      </div>
+      <div class="item">
         <div class="item-name">Gere-a-Deli · Anacortes</div>
         <div class="item-desc">New York-style deli loaded with old-school toys, giant sandwiches, homemade desserts.</div>
       </div>
@@ -640,8 +655,15 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     <div class="sec-body">
       <div class="trip-row">
         <div>
-          <div class="trip-name">Seattle Fast Ferry</div>
-          <div class="trip-hook">No car needed. 60-min passenger crossing straight to the downtown docks — Pike Place, Chihuly Garden &amp; Glass. Top 10 pick.</div>
+          <div class="trip-name">Port Gamble <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Port+Gamble+WA" target="_blank">📍 Nav</a></div>
+          <div class="trip-hook">Preserved 19th-century New England-style mill town on Hood Canal. Historic general store, small museum, antique shops, and a quiet waterfront — a different flavor than anywhere else on the trip.</div>
+        </div>
+        <div class="trip-drive">25 min</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Seattle Fast Ferry <span class="trail-pill p-dist">lower priority this trip</span></div>
+          <div class="trip-hook">No car needed, 60-min crossing straight downtown — kept here as a backup option if a free day opens up, since you've been to Seattle before and Port Gamble offers something new.</div>
         </div>
         <div class="trip-drive">walk to terminal</div>
       </div>
@@ -727,7 +749,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     </div>
     <div class="sec-body">
       <div class="rental-box">
-        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.wmbcfinder.org/" target="_blank">Galbraith Mountain Rentals / Fanatik</a> — Hub for performance trail mountain bike setups near Galbraith network.
+        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.wmbcfinder.org/" target="_blank">Galbraith Mountain Rentals / Fanatik</a> — Hub for performance trail mountain bike setups near Galbraith network.<br>
+        <b>Also nearby:</b> The Portal Container Village (Sun-E-Land Bikes) — Kids $10/hr · $40/half-day · Adults $15/hr · $50/half-day · E-Bikes $35/2hr · $60/half-day · Family Pack $60/hr · $150/half-day.
       </div>
       <div class="item">
         <div class="item-name">Chain Lakes Loop</div>
@@ -750,7 +773,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     </div>
     <div class="sec-body">
       <div class="rental-box">
-        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.semiahmoo.com/activities.php" target="_blank">Semiahmoo Resort Activity Desk</a> — Perfect place to lock in casual cruiser bikes for sweeping flat coastal spit lanes.
+        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.semiahmoo.com/activities.php" target="_blank">Semiahmoo Resort Activity Desk</a> — Perfect place to lock in casual cruiser bikes for sweeping flat coastal spit lanes. Beach Cruisers ~$15–25/hr · Youth/Strider bikes available.
       </div>
       <div class="item">
         <div class="item-name">Semiahmoo Spit Trail</div>
@@ -773,7 +796,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     </div>
     <div class="sec-body">
       <div class="rental-box">
-        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.skagitcyclecenter.com/" target="_blank">Skagit Cycle Center</a> — Local shop option on Fidalgo Island for full hybrid and family road frames before tackling trestles.
+        🚲 <b>Bike Rental Shop:</b> <a class="rental-link" href="https://www.skagitcyclecenter.com/" target="_blank">Skagit Cycle Center</a> — Local shop option on Fidalgo Island for full hybrid and family road frames before tackling trestles. Kids ~$25–30/day · Adults ~$35–45/day · E-Bikes ~$75–90/day.
       </div>
       <div class="item">
         <div class="item-name">Tommy Thompson Rail Trail</div>
@@ -796,7 +819,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     </div>
     <div class="sec-body">
       <div class="rental-box">
-        🛶 <b>Watercraft Logistics:</b> Backyard features a private gravel ramp with host-provided kayaks. Zero transport or trailer hassle required.
+        🛶 <b>Watercraft Logistics:</b> Backyard features a private gravel ramp with host-provided kayaks. Zero transport or trailer hassle required.<br>
+        🚲 <b>Bike option:</b> Bainbridge Island Cycle at the ferry terminal (35 min away) — hour/half-day/full-day rates available walk-up. Best biking option for flat waterfront paths if visiting Bainbridge.
       </div>
       <div class="item">
         <div class="item-name">Illahee State Park Loop</div>
@@ -824,6 +848,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
   </div>
 </div>
 
+<!-- BEST OF -->
+<div id="bestof" class="pane">
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">Category winners across the whole trip.</div>
+  <div class="section-card">
+    <div class="top10-item"><div>🥾</div><div><div class="top10-name">Hiking — Artist Point / Chain Lakes Loop</div><div class="top10-why">Top-tier alpine hiking amidst glaciers and summer wildflower fields.</div></div></div>
+    <div class="top10-item"><div>🥾</div><div><div class="top10-name">Coastal Hike — Ebey's Landing Ridge Trail</div><div class="top10-why">High bluffs, dynamic coastal views, historic farmsteads, rugged cobblestone beach.</div></div></div>
+    <div class="top10-item"><div>🚲</div><div><div class="top10-name">Bike — Tommy Thompson Trail</div><div class="top10-why">Dead-flat rail-trail gliding right over the water across the Fidalgo Bay trestle.</div></div></div>
+    <div class="top10-item"><div>🚲</div><div><div class="top10-name">Bike — Semiahmoo Spit</div><div class="top10-why">Flat, paved shoreline path down the coastal spit, zero traffic worries.</div></div></div>
+    <div class="top10-item"><div>🛶</div><div><div class="top10-name">Kayak — Naomi Cottage Private Ramp</div><div class="top10-why">Walk right out the backdoor for a pristine dawn paddle.</div></div></div>
+    <div class="top10-item"><div>🛶</div><div><div class="top10-name">Kayak — Semiahmoo Bay / Larrabee State Park</div><div class="top10-why">Scenic, safe waters perfect for summer rentals. <span class="warn-pill">&#10071; Bowman Bay only near Deception Pass — never the main currents</span></div></div></div>
+    <div class="top10-item"><div>🦀</div><div><div class="top10-name">Tidepooling — Birch Bay State Park</div><div class="top10-why">Tide recedes a quarter-mile, exposing warm shallows packed with hermit crabs, sea stars, sand dollars.</div></div></div>
+    <div class="top10-item"><div>🦀</div><div><div class="top10-name">Sand Flats — Centennial Beach (Canada)</div><div class="top10-why">Massive, pristine low-tide flats for sand dollar hunting, with an adjacent beachfront playground.</div></div></div>
+    <div class="top10-item"><div>🍽️</div><div><div class="top10-name">Lunch — Toby's Tavern, Coupeville</div><div class="top10-why">Fresh beer-steamed Penn Cove mussels right over the water.</div></div></div>
+    <div class="top10-item"><div>🍽️</div><div><div class="top10-name">Lunch — Barb's Fish &amp; Chips, White Rock BC</div><div class="top10-why">Fresh fish &amp; chips on the docks, watching harbor seals play.</div></div></div>
+    <div class="top10-item"><div>🍩</div><div><div class="top10-name">Sweets — Sluys Poulsbo Bakery</div><div class="top10-why">World-class historic bakery — Viking Cups, cinnamon rolls, donuts.</div></div></div>
+    <div class="top10-item"><div>🍩</div><div><div class="top10-name">Sweets — The C Shop, Birch Bay</div><div class="top10-why">Watch fresh saltwater taffy and chocolates made on-site.</div></div></div>
+    <div class="top10-item"><div>🥞</div><div><div class="top10-name">Breakfast — The Railway Café, Blaine Harbor</div><div class="top10-why">Historic red railroad caboose, great breakfast wraps and espresso on the patio.</div></div></div>
+    <div class="top10-item"><div>🏛️</div><div><div class="top10-name">Sight — Diablo Lake Overlook</div><div class="top10-why">A glacial turquoise lake so vibrant it looks fake.</div></div></div>
+    <div class="top10-item"><div>🏛️</div><div><div class="top10-name">Sight — Point Roberts</div><div class="top10-why">A unique geographic US enclave, loop roads, land-based orca watching.</div></div></div>
+    <div class="top10-item"><div>👧</div><div><div class="top10-name">Kid Pick — SPARK Museum</div><div class="top10-why">Face-to-face with a 9-foot "Cage of Lightning" Tesla Coil show.</div></div></div>
+    <div class="top10-item"><div>👧</div><div><div class="top10-name">Kid Pick — USS Turner Joy</div><div class="top10-why">Climb through hatches and take the captain's wheel on a real navy destroyer.</div></div></div>
+  </div>
+</div>
+
 <a href="#" class="scroll-top" id="scrollTopBtn" onclick="scrollToTop(event)">↑</a>
 
 <script>
@@ -832,7 +880,7 @@ function sw(id){
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   document.getElementById(id).classList.add('on');
-  const order=['overview','seattle','cruise','itinerary','p1','p2','p3','p4','trails','top10', 'naturalist','driving','logistics'];
+  const order=['overview','seattle','cruise','itinerary','p1','p2','p3','p4','trails','top10','bestof','naturalist','driving','rainyday','logistics'];
   document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('on');
   window.scrollTo(0,0);
   
@@ -1015,6 +1063,56 @@ document.getElementById("scrollTopBtn").style.display = "none";
       </div>
     </div>
   </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">⛰️</span><span class="sec-label">Mt. Baker Subalpine (Artist Point / Chain Lakes)</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Subalpine Fir &amp; Mountain Hemlock <span class="trail-pill p-type">Conifers</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Slender, spire-topped evergreens adapted to survive heavy winter snowpack along high ridges.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Pink Heather &amp; Alpine Lupine <span class="trail-pill p-vibe">Wildflowers</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Low mats of pink bell-shaped flowers and spikes of purple-blue blooms carpet alpine meadows by midsummer.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Anise Swallowtail <span class="trail-pill p-type">Butterfly</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Large yellow-and-black wings with small blue and orange spots near the tails. Often seen hill-topping on windy ridges.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Hoary Marmot <span class="trail-pill p-dist">Rodent</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Large, bulky, silver-grey, living among high boulder fields. <b>Listen for:</b> a sharp, human-like alarm whistle echoing off the rocks.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🌲</span><span class="sec-label">Kitsap Canopy &amp; Narrows (Bremerton / Illahee)</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Douglas Fir <span class="trail-pill p-type">Conifer</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Colossal, deeply-furrowed trees in old-growth groves. Cones have small three-pointed bracts resembling a mouse's back half.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Sword Fern <span class="trail-pill p-vibe">Understory</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Robust emerald fronds in dense circular crowns from damp ravine soil; each leaflet has a small hilt-like base.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Belted Kingfisher <span class="trail-pill p-type">Bird</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Stocky blue-grey, oversized head, shaggy crest. <b>Listen for:</b> a loud, dry, rattling call patrolling shoreline branches over tidal narrows.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Coastal Cutthroat Trout <span class="trail-pill p-dist">Fish</span></div>
+        <div class="item-desc"><b>Field Marks:</b> Streamlined, heavily spotted, visible in clear estuary water where streams meet saltwater bays.</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- DRIVING GUIDE -->
@@ -1063,6 +1161,96 @@ document.getElementById("scrollTopBtn").style.display = "none";
         <div class="trip-hook">About timing, not scenery. Build 3+ hrs for ferry waits and summer traffic before your flight.</div>
       </div>
       <div class="trip-drive">~1–1.5 hrs + ferry buffer</div>
+    </div>
+  </div>
+</div>
+
+<!-- RAINY DAY -->
+<div id="rainyday" class="pane">
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">Indoor backup options by phase, for the one wet day PNW summer occasionally throws in.</div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🏙️</span><span class="sec-label">Seattle</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Chihuly Garden and Glass <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Chihuly+Garden+and+Glass+Seattle+WA" target="_blank">📍 Nav</a></div>
+        <div class="item-desc">Single-level, wide, flat indoor galleries right at the base of the Space Needle. Colorful blown-glass exhibits, free wheelchairs on-site.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🌲</span><span class="sec-label">Bellingham</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">SPARK Museum of Electrical Invention</div>
+        <div class="item-desc">9-foot "Cage of Lightning" Tesla coil show — already a Top 10 pick, doubles as the best rainy-day option.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Whatcom Museum — Family Interactive Gallery (FIG) <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Whatcom+Museum+Bellingham+WA" target="_blank">📍 Nav</a></div>
+        <div class="item-desc">Hands-on indoor gallery, good rainy-day fallback for the daughter.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🏖️</span><span class="sec-label">Blaine / Birch Bay</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Marine Life Center · Bellingham</div>
+        <div class="item-desc">Free, low-stress touch-tank center — already in the Blaine activities list, also a solid wet-day choice (40 min away).</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Tsawwassen Mills (Canada) <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Tsawwassen+Mills+BC" target="_blank">📍 Nav</a></div>
+        <div class="item-desc">Massive indoor outlet mall with a Bass Pro aquarium — fully indoor option across the border, passports required.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🦅</span><span class="sec-label">Anacortes / Whidbey</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">Pacific NW Naval Air Museum <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Pacific+Northwest+Naval+Air+Museum+Oak+Harbor+WA" target="_blank">📍 Nav</a></div>
+        <div class="item-desc">Oak Harbor. Indoor aviation museum, good fallback if Deception Pass or Ebey's Landing get rained out.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Fort Casey Bunkers</div>
+        <div class="item-desc">Already a Top 10 pick — concrete corridors and tunnels are naturally rain-proof.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🛶</span><span class="sec-label">Bremerton / Kitsap</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-name">USS Turner Joy &amp; Naval Museum</div>
+        <div class="item-desc">Already a Top 10 pick — indoor exhibits, deck areas are covered.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">U.S. Naval Undersea Museum · Keyport</div>
+        <div class="item-desc">Free, fully indoor — interactive torpedo/submarine exhibits.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">SEA Discovery Center · Poulsbo <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=SEA+Discovery+Center+Poulsbo+WA" target="_blank">📍 Nav</a></div>
+        <div class="item-desc">Donation-based marine touch tank, good FIG-style indoor backup near Sluys Bakery.</div>
+      </div>
     </div>
   </div>
 </div>
@@ -1160,8 +1348,38 @@ document.getElementById("scrollTopBtn").style.display = "none";
       </div>
       <div class="item">
         <div class="item-name">Leg 4 · Airport → Rental Car → Bellingham <span class="trail-pill p-vibe">3 people, remainder of trip</span></div>
-        <div class="item-desc">Pick up the rental car at SEA airport right after disembarkation rather than downtown — saves a transfer leg, and it's where you return it 27 nights later too. Book ahead for July peak season. Consider a size up from a sedan given a month of luggage.</div>
+        <div class="item-desc">Booked: $800 total. Pick up the rental car at SEA airport right after disembarkation rather than downtown — saves a transfer leg, and it's where you return it 27 nights later too.</div>
       </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🌊</span><span class="sec-label">Tide Charts</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item">
+        <div class="item-desc">Tides matter for Birch Bay, Boundary Bay, Centennial Beach, and the Semiahmoo SUP launch. Check the night before: <a class="item-nav" href="https://tidesandcurrents.noaa.gov/noaatidepredictions.html?id=9449424" target="_blank">📍 NOAA Tide Predictions — Drayton Harbor / Blaine</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">📋</span><span class="sec-label">Book-Ahead Checklist</span></div>
+      <span class="sec-chev">&#8964;</span>
+    </div>
+    <div class="sec-body">
+      <div class="item"><div class="item-desc">☐ White Pass &amp; Yukon Railway (Skagway) — books out, reserve early</div></div>
+      <div class="item"><div class="item-desc">☐ Washington State Ferries vehicle reservation — Coupeville/Port Townsend route, sells out weeks ahead in peak summer</div></div>
+      <div class="item"><div class="item-desc">☐ Seattle fast ferry tickets (Bremerton ↔ Seattle) — buy WSF tickets online</div></div>
+      <div class="item"><div class="item-desc">☑ Rental car — booked, $800</div></div>
+      <div class="item"><div class="item-desc">☐ Private SUV/van transfers — Leg 1 &amp; Leg 3 airport transfers</div></div>
+      <div class="item"><div class="item-desc">☐ Mediterranean Inn cruise-day shuttle — sign up at check-in</div></div>
+      <div class="item"><div class="item-desc">☐ Din Tai Fung (Seattle, both visits) — expect a wait, consider a reservation/waitlist app</div></div>
+      <div class="item"><div class="item-desc">☐ Toby's Tavern (Coupeville) — popular, call ahead in peak season</div></div>
+      <div class="item"><div class="item-desc">☐ USPS mail hold — submit before departure</div></div>
     </div>
   </div>
 
