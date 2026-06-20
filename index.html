@@ -77,10 +77,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
 </div>
 
 <div class="tabs">
+  <button class="tab" onclick="sw('itinerary')">Itinerary</button>
   <button class="tab on" onclick="sw('overview')">Overview</button>
   <button class="tab" onclick="sw('seattle')">Seattle</button>
-  <button class="tab" onclick="sw('cruise')">Cruise</button>
-  <button class="tab" onclick="sw('itinerary')">Itinerary</button>
   <button class="tab" onclick="sw('p1')">Bellingham</button>
   <button class="tab" onclick="sw('p2')">Blaine</button>
   <button class="tab" onclick="sw('p3')">Anacortes</button>
@@ -206,83 +205,36 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
 </div>
 
 <!-- CRUISE -->
-<div id="cruise" class="pane">
-  <div class="base-card">
-    <div class="cost-pill">7 nights · roundtrip Seattle</div>
-    <div class="base-name">Star Princess · Inside Passage</div>
-    <div class="base-dates">June 28 – July 5</div>
-    <div class="base-vibe">Ketchikan · Endicott Arm / Dawes Glacier · Juneau · Skagway · Victoria BC. Keep the kid on deck as much as possible — wildlife happens when you're just standing and watching.</div>
-  </div>
-
-  <div class="section-card">
-    <div style="padding:10px 14px;background:#f5f4f0;border-radius:10px 10px 0 0">
-      <div style="font-size:11px;font-weight:700;color:#888780;text-transform:uppercase;letter-spacing:.06em">Port schedule</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Sat June 28</div>
-      <div class="port-name">Embed Seattle</div>
-      <div class="port-desc">Departs afternoon. Sail out through Puget Sound into the Inside Passage.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Sun June 29</div>
-      <div class="port-name">At sea · Inside Passage</div>
-      <div class="port-desc">Channel narrows, mountains rise from the water. Binoculars on deck. Watch for orcas, humpbacks, bald eagles.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Mon June 30</div>
-      <div class="port-name">Ketchikan</div>
-      <div class="port-desc">Creek Street boardwalk over salmon-run creek. Totem Bight State Park. Great Alaskan Lumberjack Show (kid-favorite). Fresh halibut dockside.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Tue July 1</div>
-      <div class="port-name">Endicott Arm / Dawes Glacier + Juneau</div>
-      <div class="port-desc">Morning: glacier calving from deck. Afternoon: Mt. Roberts Tramway, Mendenhall Glacier, whale watching.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Wed July 2</div>
-      <div class="port-name">Skagway</div>
-      <div class="port-desc">White Pass & Yukon Railway — book ahead, narrow gauge to 2,865ft through mountain passes. Gold Rush main street walk. Gold panning for the kid.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Thu July 3</div>
-      <div class="port-name">At sea · southbound</div>
-      <div class="port-desc">Rest day on the ship. Dome pool. Watch the passage in reverse.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Fri July 4</div>
-      <div class="port-name">Victoria, BC</div>
-      <div class="port-desc">Butchart Gardens (30 min from downtown, spectacular in July). Inner Harbour waterfront walk. Optional: Fairmont Empress high tea.</div>
-    </div>
-    <div class="port-row">
-      <div class="port-date">Sat July 5</div>
-      <div class="port-name">Disembark Seattle &#8594; Bellingham</div>
-      <div class="port-desc">Collect luggage. Drive I-5 north ~90 min. Salish Sea expedition begins.</div>
-    </div>
-  </div>
-</div>
-
 <!-- ITINERARY -->
 <div id="itinerary" class="pane">
-  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">Day-by-day skeleton for the Salish Sea leg. One big activity per day, chill family pace. Use as a guide, not a script.</div>
+  <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">Full day-by-day flow: Seattle pre-cruise → Star Princess Inside Passage → Salish Sea road trip. One big activity per day, chill family pace. Use as a guide, not a script.</div>
   <div class="section-card">
-    <div class="port-row"><div class="port-date">Day 1 · Sat July 5 · Bellingham</div><div class="port-name">Whatcom Falls Park walk</div><div class="port-desc">Dinner: Hokkai Ramen</div></div>
-    <div class="port-row"><div class="port-date">Day 2 · Sun July 6 · → Blaine</div><div class="port-name">Drive + Semiahmoo Spit walk</div><div class="port-desc">Lunch: Sandwich Odyssey (Bellingham) · Dinner: Drayton Harbor Oyster Co.</div></div>
-    <div class="port-row"><div class="port-date">Day 3 · Mon July 7 · Blaine</div><div class="port-name">White Rock Pier BC (passports)</div><div class="port-desc">Lunch: fish &amp; chips on seawall · Dinner: Edaleen Dairy + cabin</div></div>
-    <div class="port-row"><div class="port-date">Day 4 · Tue July 8 · Blaine</div><div class="port-name">North Cascades: Diablo Lake Overlook + Newhalem</div><div class="port-desc">Lunch: pack it · Dinner: Washingtonian Bistro</div></div>
-    <div class="port-row"><div class="port-date">Day 5 · Wed July 9 · Blaine</div><div class="port-name">Mt. Baker: Artist Point or Chain Lakes Loop</div><div class="port-desc">Lunch: pack it · Dinner: Drayton Harbor or Washingtonian</div></div>
-    <div class="port-row"><div class="port-date">Day 6 · Thu July 10 · Blaine</div><div class="port-name">Tidal flat walk + SUP/kayak rental Semiahmoo Bay</div><div class="port-desc">Rest day · Dinner: cabin or Edaleen</div></div>
-    <div class="port-row"><div class="port-date">Day 7 · Fri July 11 · Blaine</div><div class="port-name">Bellingham: Galbraith MTB + Larrabee kayak option</div><div class="port-desc">Lunch: Sandwich Odyssey · Dinner: Boundary Bay or Aslan Brewing</div></div>
-    <div class="port-row"><div class="port-date">Day 8 · Sat July 12 · Blaine</div><div class="port-name">Lummi Island ferry OR Blaine Farmer's Market rest day</div><div class="port-desc">Dinner: Everybody's Brewing (Ferndale)</div></div>
-    <div class="port-row"><div class="port-date">Day 9 · Sun July 13 · → Anacortes</div><div class="port-name">Chuckanut Drive + Tommy Thompson Rail Trail</div><div class="port-desc">Lunch: Chuckanut Manor / Oyster Bar · Dinner: Gere-a-Deli</div></div>
-    <div class="port-row"><div class="port-date">Day 10 · Mon July 14 · Anacortes</div><div class="port-name">Deception Pass Bridge + Ebey's Landing hike (5.6mi)</div><div class="port-desc">Lunch: Toby's Tavern (Penn Cove mussels) · Dinner: Boondocker's</div></div>
-    <div class="port-row"><div class="port-date">Day 11 · Tue July 15 · Anacortes</div><div class="port-name">Penn Cove kayak rental + Anacortes Old Town walk</div><div class="port-desc">Lunch: pack it or Coupeville · Dinner: Cap Sante Waterfront Grille</div></div>
-    <div class="port-row"><div class="port-date">Day 12 · Wed July 16 · → Bremerton</div><div class="port-name">Fort Casey bunkers + Whidbey ferry + first backyard kayak</div><div class="port-desc">Dinner: cook at cottage</div></div>
-    <div class="port-row"><div class="port-date">Day 13 · Thu July 17 · Bremerton</div><div class="port-name">Seattle fast ferry (no car) → Pike Place + Chihuly</div><div class="port-desc">Lunch: Pike Place graze · Dinner: Din Tai Fung in Seattle</div></div>
-    <div class="port-row"><div class="port-date">Day 14 · Fri July 18 · Bremerton</div><div class="port-name">Illahee State Park old-growth loop + kayak #2</div><div class="port-desc">Dinner: Boat Shed Restaurant</div></div>
-    <div class="port-row"><div class="port-date">Day 15 · Sat July 19 · Bremerton</div><div class="port-name">Poulsbo: Sluys Bakery + Liberty Bay walk</div><div class="port-desc">Lunch: Tizley's Europub · Dinner: cottage — Hood Canal spot prawns</div></div>
-    <div class="port-row"><div class="port-date">Day 16 · Sun July 20 · Bremerton</div><div class="port-name">Bainbridge Island option OR rest day</div><div class="port-desc">Lunch: Winslow waterfront / cabin · Dinner: cottage or Boat Shed</div></div>
-    <div class="port-row"><div class="port-date">Day 17 · Mon July 21 · Bremerton</div><div class="port-name">Dawn kayak + Bremerton Naval Museum option</div><div class="port-desc">Dinner: Boat Shed (final nice dinner)</div></div>
-    <div class="port-row"><div class="port-date">Day 18 · Tue July 22 · Departure</div><div class="port-name">Final dawn paddle → Bremerton ferry → SEA</div><div class="port-desc">—</div></div>
+    <div class="port-row"><div class="port-date">Day 1 · Fri June 27 · Seattle</div><div class="port-name">Pike Place Market + Olympic Sculpture Park</div><div class="port-desc">Dinner: Din Tai Fung or Queen Anne Beerhall · Pack cruise luggage tonight</div></div>
+    <div class="port-row"><div class="port-date">Day 2 · Sat June 28 · Embark</div><div class="port-name">Embark Seattle, Pier 91</div><div class="port-desc">Departs afternoon. Sail out through Puget Sound into the Inside Passage.</div></div>
+    <div class="port-row"><div class="port-date">Day 3 · Sun June 29 · At sea</div><div class="port-name">Inside Passage</div><div class="port-desc">Channel narrows, mountains rise from the water. Binoculars on deck — orcas, humpbacks, bald eagles, puffins.</div></div>
+    <div class="port-row"><div class="port-date">Day 4 · Mon June 30 · Ketchikan</div><div class="port-name">Creek Street + Totem Bight + Lumberjack Show</div><div class="port-desc">Fresh halibut dockside.</div></div>
+    <div class="port-row"><div class="port-date">Day 5 · Tue July 1 · Endicott Arm + Juneau</div><div class="port-name">Glacier calving from deck, then Mt. Roberts Tramway + Mendenhall Glacier</div><div class="port-desc">Whale watching.</div></div>
+    <div class="port-row"><div class="port-date">Day 6 · Wed July 2 · Skagway</div><div class="port-name">White Pass &amp; Yukon Railway (book ahead) + Gold Rush main street</div><div class="port-desc">Gold panning for the kid.</div></div>
+    <div class="port-row"><div class="port-date">Day 7 · Thu July 3 · At sea</div><div class="port-name">Southbound rest day on the ship</div><div class="port-desc">Dome pool. Watch the passage in reverse.</div></div>
+    <div class="port-row"><div class="port-date">Day 8 · Fri July 4 · Victoria, BC</div><div class="port-name">Butchart Gardens + Inner Harbour walk</div><div class="port-desc">Optional: Fairmont Empress high tea.</div></div>
+    <div class="port-row"><div class="port-date">Day 9 · Sat July 5 · Disembark → Bellingham</div><div class="port-name">Collect luggage, drive I-5 north ~90 min, Whatcom Falls Park walk</div><div class="port-desc">Dinner: Hokkai Ramen</div></div>
+    <div class="port-row"><div class="port-date">Day 10 · Sun July 6 · → Blaine</div><div class="port-name">Drive + Semiahmoo Spit walk</div><div class="port-desc">Lunch: Sandwich Odyssey (Bellingham) · Dinner: Drayton Harbor Oyster Co.</div></div>
+    <div class="port-row"><div class="port-date">Day 11 · Mon July 7 · Blaine</div><div class="port-name">White Rock Pier BC (passports)</div><div class="port-desc">Lunch: fish &amp; chips on seawall · Dinner: Edaleen Dairy + cabin</div></div>
+    <div class="port-row"><div class="port-date">Day 12 · Tue July 8 · Blaine</div><div class="port-name">North Cascades: Diablo Lake Overlook + Newhalem</div><div class="port-desc">Lunch: pack it · Dinner: Washingtonian Bistro</div></div>
+    <div class="port-row"><div class="port-date">Day 13 · Wed July 9 · Blaine</div><div class="port-name">Mt. Baker: Artist Point or Chain Lakes Loop</div><div class="port-desc">Lunch: pack it · Dinner: Drayton Harbor or Washingtonian</div></div>
+    <div class="port-row"><div class="port-date">Day 14 · Thu July 10 · Blaine</div><div class="port-name">Tidal flat walk + SUP/kayak rental Semiahmoo Bay</div><div class="port-desc">Rest day · Dinner: cabin or Edaleen</div></div>
+    <div class="port-row"><div class="port-date">Day 15 · Fri July 11 · Blaine</div><div class="port-name">Bellingham: Galbraith MTB + Larrabee kayak option</div><div class="port-desc">Lunch: Sandwich Odyssey · Dinner: Boundary Bay or Aslan Brewing</div></div>
+    <div class="port-row"><div class="port-date">Day 16 · Sat July 12 · Blaine</div><div class="port-name">Lummi Island ferry OR Blaine Farmer's Market rest day</div><div class="port-desc">Dinner: Everybody's Brewing (Ferndale)</div></div>
+    <div class="port-row"><div class="port-date">Day 17 · Sun July 13 · → Anacortes</div><div class="port-name">Chuckanut Drive + Tommy Thompson Rail Trail</div><div class="port-desc">Lunch: Chuckanut Manor / Oyster Bar · Dinner: Gere-a-Deli</div></div>
+    <div class="port-row"><div class="port-date">Day 18 · Mon July 14 · Anacortes</div><div class="port-name">Deception Pass Bridge + Ebey's Landing hike (5.6mi)</div><div class="port-desc">Lunch: Toby's Tavern (Penn Cove mussels) · Dinner: Boondocker's</div></div>
+    <div class="port-row"><div class="port-date">Day 19 · Tue July 15 · Anacortes</div><div class="port-name">Penn Cove kayak rental + Anacortes Old Town walk</div><div class="port-desc">Lunch: pack it or Coupeville · Dinner: Cap Sante Waterfront Grille</div></div>
+    <div class="port-row"><div class="port-date">Day 20 · Wed July 16 · → Bremerton</div><div class="port-name">Fort Casey bunkers + Whidbey ferry + first backyard kayak</div><div class="port-desc">Dinner: cook at cottage</div></div>
+    <div class="port-row"><div class="port-date">Day 21 · Thu July 17 · Bremerton</div><div class="port-name">Port Gamble day trip</div><div class="port-desc">Lunch: Port Gamble general store · Dinner: Manette Saloon</div></div>
+    <div class="port-row"><div class="port-date">Day 22 · Fri July 18 · Bremerton</div><div class="port-name">Illahee State Park old-growth loop + kayak #2</div><div class="port-desc">Dinner: Boat Shed Restaurant</div></div>
+    <div class="port-row"><div class="port-date">Day 23 · Sat July 19 · Bremerton</div><div class="port-name">Poulsbo: Sluys Bakery + Liberty Bay walk</div><div class="port-desc">Lunch: Tizley's Europub · Dinner: cottage — Hood Canal spot prawns</div></div>
+    <div class="port-row"><div class="port-date">Day 24 · Sun July 20 · Bremerton</div><div class="port-name">Bainbridge Island option OR rest day</div><div class="port-desc">Lunch: Winslow waterfront / cabin · Dinner: cottage or Boat Shed</div></div>
+    <div class="port-row"><div class="port-date">Day 25 · Mon July 21 · Bremerton</div><div class="port-name">Dawn kayak + Bremerton Naval Museum option</div><div class="port-desc">Dinner: Boat Shed (final nice dinner)</div></div>
+    <div class="port-row"><div class="port-date">Day 26 · Tue July 22 · Departure</div><div class="port-name">Final dawn paddle → Bremerton ferry → SEA</div><div class="port-desc">—</div></div>
   </div>
 </div>
 
@@ -324,6 +276,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
     <div class="item">
       <div class="item-name">Bellingham Bells (minor league baseball) <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Joe+Martin+Field+Bellingham+WA" target="_blank">📍 Nav</a></div>
       <div class="item-desc">Casual evening game if schedule lines up — kid-friendly promos and giveaways are common.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Scudder Pond <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Scudder+Pond+Bellingham+WA" target="_blank">📍 Nav</a></div>
+      <div class="item-desc">Urban wildlife preserve next to Whatcom Falls Park, easy to pair with that visit. Boardwalks and blinds for spotting wood ducks, hooded mergansers, green herons.</div>
+    </div>
+    <div class="item">
+      <div class="item-name">Tennant Lake Wildlife Area <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Tennant+Lake+Wildlife+Area+Ferndale+WA" target="_blank">📍 Nav</a></div>
+      <div class="item-desc">Ferndale, 15 min north. A 50-foot viewing tower and 1-mile wood-plank boardwalk loop over wetlands — marsh wrens, osprey, owls, woodpeckers.</div>
     </div>
   </div>
 
@@ -370,6 +330,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
       <div class="item">
         <div class="item-name">Birch Bay State Park &amp; Boundary Bay <a class="item-nav" href="https://maps.google.com/?cid=15222045543166548549" target="_blank">&#128205; Nav</a></div>
         <div class="item-desc">Premium tidepooling and mudflats. Low tide recedes a quarter-mile, exposing warm shallows full of tiny hermit crabs, sea stars, and sand dollars. Cross the border into Canada's Centennial Beach for massive sand flat fields and custom playgrounds.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Point Whitehorn Marine Reserve <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Point+Whitehorn+Marine+Reserve+WA" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">15 min from Blaine. Flat 0.75-mile forested trail with a boardwalk transitioning onto a cobblestone beach facing the San Juan Islands. Great naturalist walk for tidepool marine life.</div>
       </div>
       <div class="item">
         <div class="item-name">Semiahmoo Spit Trail <a class="item-nav" href="https://maps.google.com/?cid=8311827099391817858" target="_blank">&#128205; Nav</a></div>
@@ -644,6 +608,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
         <div class="item-name">Carlisle II Foot Ferry · Bremerton Marina</div>
         <div class="item-desc">Historic 1917 wooden foot-ferry (~$2/person), last operating vessel of the Mosquito Fleet. Putters across to Port Orchard for toy boutiques, candy counters, and a waterfront stroll.</div>
       </div>
+      <div class="item">
+        <div class="item-name">The Historic Valentinetti Puppet Museum <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Valentinetti+Puppet+Museum+Bremerton+WA" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">Downtown Bremerton. A massive global collection of historical and artistic puppets, marionettes, and theatrical props — a quick, niche, highly visual stop. Good rainy-day option too.</div>
+      </div>
     </div>
   </div>
 
@@ -653,6 +621,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-siz
       <span class="sec-chev">&#8964;</span>
     </div>
     <div class="sec-body">
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Guillemot Cove Nature Reserve <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Guillemot+Cove+Nature+Reserve+Seabeck+WA" target="_blank">📍 Nav</a></div>
+          <div class="trip-hook">Seabeck. Easy 2-mile trail network through giant cedar stumps, streams, and a boardwalk opening onto a Hood Canal saltwater beach. Kid highlight: the "Stump House" — a massive hollowed-out cedar stump that works as a walk-in fort.</div>
+        </div>
+        <div class="trip-drive">25 min</div>
+      </div>
+      <div class="trip-row">
+        <div>
+          <div class="trip-name">Sawdust Hill Alpaca Farm <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Sawdust+Hill+Alpaca+Farm+Poulsbo+WA" target="_blank">📍 Nav</a></div>
+          <div class="trip-hook">Poulsbo. Highly rated family destination — schedule close-up interactions and educational walks with alpacas. Pair with a Sluys Bakery stop.</div>
+        </div>
+        <div class="trip-drive">20–30 min</div>
+      </div>
       <div class="trip-row">
         <div>
           <div class="trip-name">Port Gamble <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Port+Gamble+WA" target="_blank">📍 Nav</a></div>
@@ -880,7 +862,7 @@ function sw(id){
   document.querySelectorAll('.pane').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('on'));
   document.getElementById(id).classList.add('on');
-  const order=['overview','seattle','cruise','itinerary','p1','p2','p3','p4','trails','top10','bestof','naturalist','driving','rainyday','logistics'];
+  const order=['itinerary','overview','seattle','p1','p2','p3','p4','trails','top10','bestof','naturalist','driving','rainyday','logistics'];
   document.querySelectorAll('.tab')[order.indexOf(id)].classList.add('on');
   window.scrollTo(0,0);
   
@@ -955,6 +937,44 @@ document.getElementById("scrollTopBtn").style.display = "none";
     <div id="naturalist" class="pane">
   <div style="font-size:13px;color:#5F5E5A;margin-bottom:12px;line-height:1.6">
     Field guide for wildlife spotting across the Inside Passage and Salish Sea loops. Keep your 8x42 optics ready on deck and at the shoreline.
+  </div>
+
+  <div class="section">
+    <div class="sec-hdr" onclick="tog(this)">
+      <div class="sec-hdr-left"><span class="sec-icon">🦅</span><span class="sec-label">Top Bird-Watching Spots</span></div>
+      <span class="sec-chev">⌄</span>
+    </div>
+    <div class="sec-body">
+      <div style="padding:10px 14px;font-size:12px;color:#5F5E5A">Your bases sit right along the Pacific Flyway — world-class birding for coastal marine birds, raptors, and waterfowl.</div>
+      <div class="item">
+        <div class="item-name">Inside Passage Cruise <span class="trail-pill p-vibe">Exceptional · July peak season</span></div>
+        <div class="item-desc">July is peak pelagic (ocean-going) birding season. Calm, nutrient-rich channels flanked by steep cliffs give excellent visibility right from the deck.
+          <br><b>Puffins:</b> Tufted Puffins (bright orange beaks, blonde head tufts) and Horned Puffins nesting in colonies on sheer cliff faces at the water's edge.
+          <br><b>Diving birds:</b> Rhinoceros Auklets (chaotic low flight, dive up to 300 feet), Common Murres, Marbled Murrelets, Pigeon Guillemots.
+          <br><b>Shoreline &amp; glaciers:</b> Scan old-growth Sitka spruce tops for massive bald eagle nests. Black-legged kittiwakes and glaucous-winged gulls swarm near glacier faces where upwelling water pushes food to the surface.
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-name">Drayton Harbor &amp; Semiahmoo Spit <span class="trail-pill p-vibe">Blaine</span></div>
+        <div class="item-desc">Recognized by Audubon Washington as an Important Bird Area. Massive numbers of loons, brant, grebes, bald eagles, and nesting peregrine falcons.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Birch Bay State Park &amp; Point Whitehorn <span class="trail-pill p-vibe">Blaine</span></div>
+        <div class="item-desc">Acrobatic dunlin flocks (thousands strong), black-bellied plovers, migrating sea ducks feeding just offshore.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Scudder Pond / Whatcom Falls Park <span class="trail-pill p-vibe">Bellingham</span></div>
+        <div class="item-desc">Urban wildlife preserve (North Cascades Audubon Society) with boardwalks and blinds for wood ducks, hooded mergansers, green herons, secretive sora rails.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Tennant Lake Wildlife Area <span class="trail-pill p-vibe">Ferndale, 15 min N of Bellingham</span> <a class="item-nav" href="https://www.google.com/maps/search/?api=1&query=Tennant+Lake+Wildlife+Area+Ferndale+WA" target="_blank">&#128205; Nav</a></div>
+        <div class="item-desc">50-foot viewing tower and a 1-mile wood-plank boardwalk loop over wetlands. Marsh wrens, osprey, owls, woodpeckers.</div>
+      </div>
+      <div class="item">
+        <div class="item-name">Guillemot Cove Nature Reserve <span class="trail-pill p-vibe">Seabeck, near Bremerton</span></div>
+        <div class="item-desc">Named for the Pigeon Guillemot — saltwater beach and dense forest, great for coastal marine birds, herons, and kingfishers.</div>
+      </div>
+    </div>
   </div>
 
   <div class="section">
